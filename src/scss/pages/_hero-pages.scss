@@ -1,0 +1,48 @@
+.global-wrapper#hero-pages{
+
+    & section{
+
+        &#hero{
+            background: url(../img/city_panorama.png) center center no-repeat;
+            background-size: cover;
+            height: 752px;
+            margin-bottom: 60px;
+    
+            & .container{
+    
+                height: 100%;
+    
+                & .row{
+    
+                    height: 100%;
+                    align-items: center;
+                    display: flex;
+                    height: 100%;
+    
+                    & .col{
+    
+                        & h1{
+    
+                            & strong, & span{
+    
+                                display: block;
+    
+                                @media(max-width: $small){
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            @media(max-width: $tablet-edge){
+    
+                height: 50vw;
+                min-height: 350px;
+    
+            }
+        }
+    }
+
+}

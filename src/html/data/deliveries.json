@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "label": "Северная, 324, литер Г",
+        "checked": "checked",
+        "extraClass": "",
+        "prefix": "del"
+    },
+    {
+        "id": 2,
+        "label": "Указать другой адрес",
+        "checked": "",
+        "extraClass": "need-address",
+        "prefix": "del"
+    }    
+]

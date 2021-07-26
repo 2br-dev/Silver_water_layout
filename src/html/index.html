@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Главная"})
+</head>
+<body>
+    @@include('./parts/header.html')
+    <main>
+        <div class="global-wrapper" id="main">
+            <section id="hero">
+                <div class="container">
+                    <div class="row flex">
+                        <div class="col l6 m12">
+                            <h1>
+                                <strong>Доставка воды</strong>
+                                <span>в Новороссийске</span>
+                            </h1>
+                            <p>
+                                Заказать доставку воды – просто. Работаем круглосуточно, каждый день без перерывов и выходных.
+                                Большой ассортимент питьевой воды. Заказать воду можно по телефону, либо на сайте.
+                            </p>
+                            <p class="actions-wrapper">
+                                <a href="/catalog.html" class="btn">Перейти в каталог</a>
+                            </p>
+                        </div>
+                        <div class="col l6 m12">
+                            <div class="lazy monument" data-src="/img/monument.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="popular-water">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            @@include('./parts/popular-water-slider.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="water-delivery">
+                <div class="container">
+                    <div class="row flex">
+                        <div class="col m7 s12">
+                            <h2>ВОДА НА ДОМ</h2>
+                            <p>Давно известно, что качественная вода – важная составляющая крепкого здоровья. Но где эту воду брать? 
+                                В городских условиях рассчитывать на воду из-под крана не приходится: она едва ли чиста и уж точно не полезна.</p>
+                            <p>Наш сервис по доставке чистой питьевой воды поможет вам. Мы занимаемся доставкой питьевой воды высшего качества. 
+                                У нас в ассортименте представлена вода, которая идеально подойдет для ежедневного употребления: 
+                                чистая артезианская и полезная горная талая вода</p>
+                            <p>Миссия нашей компании – сделать доставку качественной питьевой воды простой, доступной и комфортной для вас. 
+                                Поэтому мы не только оперативно и точно в срок доставляем воду, но и поднимаем ее к вам на этаж, помогаем 
+                                с установкой бутыли на кулер или с установкой помпы.</p>
+                            <p>Оформите доставку воды по телефону или на сайте и чистая питьевая вода совсем скоро будет у вас.</p>
+                        </div>
+                        <div class="col m5 s12 home-illustration">
+                            <div class="lazy" data-src="/img/delivery_home.png"></div>
+                        </div>
+                        <div class="col m5 s12">
+                            <div class="lazy" data-src="/img/delivery_office.jpg"></div>
+                        </div>
+                        <div class="col offset-l1 l5 m7 s12">
+                            <h2>ДОСТАВКА ПИТЬЕВОЙ ВОДЫ В ОФИС</h2>
+                            <p>Работа – то место, где большинство людей проводят большую часть дня. Чтобы ваши сотрудники работали эффективно, 
+                                важно создать подходящие условия труда. Доступ к чистой питьевой воде – одна из важнейших потребностей человека, 
+                                а значит и основа для создания комфортной среды на работе.</p>
+                            <p>Насыщенная природными минералами вода помогает быть бодрым и внимательным в течении всего рабочего дня, 
+                                что положительно сказывается на работоспособности и обучаемости человека.</p>
+                            <p>Вся вода которую мы доставляем имеет необходимые сертификаты качества. Именно поэтому на протяжении многих лет 
+                                мы поставляем воду в школы, детские сады, лечебные учреждения и другие важные объекты города Новороссийск. </p>
+                        </div>
+                        <div class="col s1 bubbles">
+                            <div class="lazy" id="bubbles" data-src="/img/bubbles.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="buy-cooler">
+                <div class="container">
+                    <div class="row flex">
+                        <div class="col m6 s12">
+                            <h2>Купить кулер</h2>
+                            <p>
+                                У нас Вы можете купить кулер (раздатчик) для розлива воды. Широкий ассортимент, 
+                                и разнообразие представленных марок, позволят вам подобрать кулер для дома или офиса, 
+                                удовлетворяющий все ваши потребности.
+                            </p>
+                            <p>
+                                В нашем каталоге кулеров:
+                                <ul class="browser-default">
+                                    <li>компрессорные и электронные</li>
+                                    <li>напольные и настольные</li>
+                                    <li>кулеры без охлаждения (чайники)</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col m6 s12 buy-illustration">
+                            <div class="lazy" data-src="/img/cooler.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="popular-coolers">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            @@include('./parts/popular-coolers-slider.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l2 m6 s6 xs6 t6">
+                            <div class="icon-wrapper"><i class="mdi mdi-calendar-check"></i></div>
+                            <div class="feature-name">Режим работы без выходных</div>
+                        </div>
+                        <div class="col l2 m6 s6 xs6 t6">
+                            <div class="icon-wrapper"><i class="mdi mdi-clock-outline"></i></div>
+                            <div class="feature-name">Круглосуточный прием заказов</div>
+                        </div>
+                        <div class="col l2 m6 s6 xs6 t6">
+                            <div class="icon-wrapper"><i class="mdi mdi-equalizer-outline"></i></div>
+                            <div class="feature-name">Широкий ассортимент питьевой воды</div>
+                        </div>
+                        <div class="col l2 m6 s6 xs6 t6">
+                            <div class="icon-wrapper"><i class="mdi mdi-beaker-check-outline"></i></div>
+                            <div class="feature-name">Постоянный контроль качества</div>
+                        </div>
+                        <div class="col l2 m6 s6 xs6 t6">
+                            <div class="icon-wrapper"><i class="mdi mdi-face-agent"></i></div>
+                            <div class="feature-name">Внимательная служба поддержки</div>
+                        </div>
+                        <div class="col l2 m6 s6 xs6 t6">
+                            <div class="icon-wrapper"><i class="mdi mdi-hammer-wrench"></i></div>
+                            <div class="feature-name">Обслуживание и ремонт кулеров</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="delivery-terms">
+                <div class="container">
+                    <div class="row flex">
+                        <div class="col m6 s12">
+                            <h2>Условия доставки</h2>
+                            <p>
+                                Доставка воды по Новороссийску бесплатна и осуществляется преимущественно в день заявки. 
+                                Мы работаем круглосуточно, без праздников и выходных.
+                            </p>
+                            <p>
+                                Существует три периода доставки: 
+                                <ul class="browser-default">
+                                    <li>с 09:00 до 13:00</li>
+                                    <li>с 14:00 до 17:00</li>
+                                    <li>с 18:00 до 21:00</li>
+                                </ul>
+                                При заказе воды, вы выбираете наиболее подходящий для вас период, а наши экспедиторы доставят вам воду точно в срок.
+                            </p>
+                            <p>
+                                Заказать воду вы можете в любое удобное для вас время, ведь мы принимаем заказы круглосуточно. 
+                                После 20:00 Ваш заказ примет автоответчик, а утром он будет обработан оператором в первую очередь.
+                            </p>
+                        </div>
+                        <div class="col m6 s12 hide-on-med-and-down">
+                            <div class="lazy" data-src="/img/warning_sign.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

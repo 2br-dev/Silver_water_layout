@@ -1,0 +1,187 @@
+[
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 07 LD",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 16 TD/E",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 178 LD",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 16 LW/E",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 68 TD",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX HD-1363 C",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 07 LD",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 16 TD/E",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 178 LD",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 16 LW/E",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 68 TD",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX HD-1363 C",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 07 LD",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 16 TD/E",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 178 LD",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 16 LW/E",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 68 TD",
+        "price": "7 200",
+        "type": "table",
+        "wrapper": "swiper-slide",
+        "link": "/product-cooler.html"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX HD-1363 C",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 07 LD",
+        "price": "7 200",
+        "type": "table",
+        "wrapper": "swiper-slide"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 16 TD/E",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 178 LD",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 16 LW/E",
+        "price": "7 200",
+        "type": "table",
+        "wrapper": "swiper-slide"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX 68 TD",
+        "price": "7 200",
+        "type": "table",
+        "wrapper": "swiper-slide"
+    },
+    {
+        "image": "/img/fish/cooler.png",
+        "title": "SMIXX HD-1363 C",
+        "price": "7 200",
+        "type": "floor",
+        "wrapper": "swiper-slide"
+    }
+]

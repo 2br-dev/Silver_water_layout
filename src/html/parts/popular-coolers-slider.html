@@ -1,0 +1,12 @@
+<div class="section-header">Популярные кулеры</div>
+<div class="swiper-container popular-slider" id="popular-coolers-slider">
+    <div class="swiper-wrapper">
+        @@loop('./card-single-price.html', './data/coolers.json')
+    </div>
+</div>
+<div class="slider-extras" id="coolers-slider-extras">
+    <div class="navigation-wrapper">
+        <div class="swiper-pagination" id="cooler-slider-extras"></div>
+    </div>
+    <div class="link"><a href="/catalog.html" class="btn">В каталог</a></div>
+</div>

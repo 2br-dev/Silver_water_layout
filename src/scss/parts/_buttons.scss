@@ -1,0 +1,32 @@
+a{
+
+    &.btn{
+
+        background: $call-to-action;
+        color: #fff;
+        border-radius: 30px;
+        white-space: nowrap;
+        line-height: 46px;
+        display: inline-block;
+        padding: 0 14px;
+        transition: background .2s, box-shadow .2s;
+
+        & .mdi{
+            font-size: 21px;
+        }
+
+        &.small{
+            line-height: 34px;
+            padding: 0 8px;
+        }
+
+        &:hover{
+            background: lighten($call-to-action, 6);
+        }
+
+        @media(max-width: $large){
+
+            line-height: 36px;
+        }
+    }
+}

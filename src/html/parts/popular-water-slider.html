@@ -1,0 +1,12 @@
+<div class="section-header">Популярная вода</div>
+<div class="swiper-container popular-slider" id="popular-water-slider">
+    <div class="swiper-wrapper">
+        @@loop('./card-multiple-prices.html', './data/water-slider.json')
+    </div>
+</div>
+<div class="slider-extras">
+    <div class="navigation-wrapper">
+        <div class="swiper-pagination" id="water-slider-extras"></div>
+    </div>
+    <div class="link"><a href="/catalog.html" class="btn">В каталог</a></div>
+</div>

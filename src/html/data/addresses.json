@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "checked": "checked",
+        "extraClass": "",
+        "label": "ул. Московская, 129/206",
+        "prefix": "addr"
+    },
+    {
+        "id": 2,
+        "checked": "",
+        "extraClass": "",
+        "label": "ул. Северная, д. 324, литер Г",
+        "prefix": "addr"
+    },
+    {
+        "id": 3,
+        "checked": "",
+        "extraClass": "",
+        "label": "ул. Пушкина, 46/9",
+        "prefix": "addr"
+    }
+]

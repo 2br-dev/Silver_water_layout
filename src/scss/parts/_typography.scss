@@ -1,0 +1,124 @@
+body{
+
+    font-size: 16px;
+    font-family: 'Montserrat';
+    color: $text;
+    line-height: 1.75rem;
+    
+    & h1, h1 *{
+        font-weight: 700;
+        color: $primary;
+        font-size: 64px;
+        text-transform: uppercase;
+        margin-top: 0;
+    
+        & span{
+            color: $secondary;
+            font-size: 48px;
+            display: block;
+        }
+    
+        @media(max-width: $tablet-edge){
+            font-size: 48px;
+    
+            & span{
+                font-size: 38px;
+            }
+        }
+    
+        @media(max-width: $small){
+            font-size: 28px;
+    
+            & span{
+                font-size: 22px;
+            }
+        }
+    }
+
+    & h2{
+        font-size: 36px;
+        font-weight: 700;
+
+        @media(max-width: $tablet-edge){
+            font-size: 28px;
+        }
+
+        @media(max-width: $small){
+            font-size: 24px;
+        }
+
+        &.h3{
+
+            font-size: 24px;
+        }
+    }
+
+    & h3{
+
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    & .section-header{
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 36px;
+        position: relative;
+        display: block;
+        width: calc(50% - 1.5rem);
+        min-width: fit-content;
+        border-bottom: 1px solid $text;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+
+
+        @media(max-width: $tablet-edge){
+            font-size: 28px;
+        }
+
+        @media(max-width: $small){
+            font-size: 26px;
+        }
+    }
+
+    & ul.browser-default, & ol.browser-default{
+
+        padding: 0 16px;
+
+        &.columns2{
+            column-count: 2;
+            column-gap: 1.5rem;
+
+            @media(max-width: $small){
+                column-count: 1;
+            }
+        }
+    }
+
+    & ol.browser-default{
+
+        list-style: none;
+        counter-reset: myCounter;
+        padding: 0 4px;
+
+        & li{
+            counter-increment: myCounter;
+            display: flex;
+
+            &:before{
+                content: counter(myCounter) ". ";
+                width: 30px;
+                display: block;
+                flex-shrink: 0;
+                font-weight: bold;
+            }
+        }
+    }
+
+    & .col{
+
+        & h2:first-child{
+            margin-top: 0;
+        }
+    }
+}

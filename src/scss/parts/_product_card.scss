@@ -1,0 +1,118 @@
+.product-card{
+
+    box-shadow: 0 2px 4px rgba(black, .4);
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .3s;
+    position: relative;
+
+    &:hover{
+        box-shadow: 0 4px 8px rgba(black, .4), 0 0 0 2px $call-to-action inset;
+    }
+
+    & .type{
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        width: 30px;
+        height: 46px;
+
+        &.floor{
+            background: url(../img/type_floor.svg) center center no-repeat;
+        }
+
+        &.table{
+            background: url(../img/type_table.svg) center center no-repeat;
+        }
+    }
+
+    & .image{
+        padding-top: 100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 10px 0;
+    }
+
+    & .name{
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+
+    & .prices{
+
+        display: flex;
+        margin-top: 15px;
+
+        & .bottle-count{
+            font-size: 12px;
+            line-height: 14px;
+            color: #999;
+        }
+        
+        & .primary, & .secondaries{
+            width: 50%;
+            flex-grow: 1;
+        }
+
+        & .primary{
+
+            & .price{
+
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 36px;
+            }
+        }
+
+        & .secondaries{
+            
+            & .secondary{
+                box-shadow: 0 0 0 3px solid olive;
+                padding-bottom: 10px;
+                text-align: center;
+
+                & .price{
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    & > .price{
+
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    & .separator{
+        flex-grow: 1;
+    }
+
+    & .actions{
+
+        text-align: center;
+        padding: 10px 0;
+
+        & .btn{
+
+            box-shadow: 0 0 0 6px white;
+            position: relative;
+
+            &:first-of-type{
+                z-index: 2;
+            }
+
+            &:last-of-type{
+                transform: translateX(-4px);
+            }
+        }
+    }
+}

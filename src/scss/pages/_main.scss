@@ -1,0 +1,214 @@
+.global-wrapper#main{
+
+    & section{
+
+        &#hero{
+            background: url(../img/city_panorama.png) center center no-repeat;
+            background-size: cover;
+            height: 752px;
+            margin-bottom: 60px;
+
+            & .container{
+
+                height: 100%;
+
+                & .row{
+
+                    height: 100%;
+                    align-items: center;
+
+                    & .col{
+
+                        & h1{
+
+                            & strong, & span{
+                                display: block;
+
+                                @media(max-width: $small){
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        & .actions-wrapper{
+                            display: block;
+                            margin-top: 50px;
+                        }
+
+                        & .monument{
+                            padding-top: 75%;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            width: 80%;
+                            margin: auto;
+                            transform: translateY(100px);
+
+                            @media(max-width: $large){
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media(max-width: $tablet-edge){
+
+                height: fit-content;
+
+                & .container{
+
+                    & .row{
+
+                        & .col{
+
+                            & .monument{
+                                
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &#water-delivery{
+
+            & .row.flex{
+
+                align-items: center;
+                margin: 20px 0;
+                height: 100%;
+
+                & .col{
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                & .lazy{
+                    padding-top: 75%;
+                    background-size: cover;
+                    background-position: center;
+        
+                    &#bubbles{
+                        height: 100%;
+                        padding-top: 350%;
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+
+            @media(max-width: $large){
+
+                & .home-illustration{
+                    order: -1;
+                }
+
+                & .bubbles{
+
+                    display: none;
+                }
+            }
+        }
+
+        &#buy-cooler{
+
+            background: $primary;
+            color: #fff;
+            padding: 0;
+
+            & .row{
+                align-items: center;
+            }
+
+            & .lazy{
+                padding-top: 75%;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+
+                &:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to left, $primary, transparent 20%, transparent 80%, $primary);
+                }
+            }
+
+            @media(max-width: $medium){
+                
+                & .buy-illustration{
+                    
+                    order: -1;
+                    margin-top: 20px;
+
+                    & .lazy{
+                        padding-top: 50%;
+
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &#features{
+
+            & .col{
+
+                margin-bottom: 40px;
+                
+                & .icon-wrapper{
+                    text-align: center;
+    
+                    & i{
+                        font-size: 60px;
+                        line-height: 136px;
+                        display: inline-block;
+                        width: 140px;
+                        border-radius: 50%;
+                        margin-bottom: 20px;
+                        border: 3px solid $fogged;
+                        box-shadow: 0 0 0 4px white inset, 0 0 0 5px $fogged inset;
+                        color: $primary;
+
+                        @media(max-width: $medium){
+                            font-size: 36px;
+                            line-height: 80px;
+                            width: 80px;
+                            line-height: 76px;
+                        }
+                    }
+                }
+    
+                & .feature-name{
+    
+                    text-align: center;
+                }
+            }
+
+        }
+
+        &#delivery-terms{
+            background: linear-gradient(to bottom, #79A8DC, #ADCFED, #E7F4FF);
+            padding: 0;
+
+            & .row{
+                align-items: center;
+            }
+
+            & .lazy{
+                padding-top: 100%;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

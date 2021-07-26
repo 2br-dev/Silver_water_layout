@@ -1,0 +1,24 @@
+// import framework
+@import './framework/materialize';
+@import './framework/swiper_bundle';
+@import './framework/materialdesignicons';
+
+// import custom parts
+@import './parts/fonts';
+@import './parts/vars';
+@import './parts/custom_grid';
+@import './parts/nav';
+@import './parts/helpers';
+@import './parts/typography';
+@import './parts/buttons';
+@import './parts/product_card';
+@import './parts/footer';
+@import './parts/inputs';
+
+// import entire pages
+@import './pages/main';
+@import './pages/product_list';
+@import './pages/product';
+@import './pages/account';
+@import './pages/compare';
+@import './pages/hero-pages';

@@ -1,0 +1,68 @@
+footer{
+
+    
+    & .row{
+
+        align-items: center;
+
+        & .footer-wrapper{
+            border-top: 1px solid $text;
+            padding-top: 50px;
+            margin-top: 50px;
+        }
+
+        & .col{
+
+            & a{
+                color: $text;
+            }
+    
+            &.logo{
+
+                & .footer-logo{
+                    background: url(../img/logo_footer.svg) center center no-repeat;
+                    display: block;
+                    width: 230px;
+                    height: 84px;
+                    margin: auto;
+                }
+                
+                margin-bottom: 20px;
+                
+                @media(max-width: $medium){
+                    order: -1;
+                }
+            }
+            
+            &.phones{
+                
+                text-align: center;
+                margin-bottom: 20px;
+
+                @media(max-width: $medium){
+
+                    &:nth-child(1){
+                        text-align: right;
+                    }
+
+                    &:nth-child(3){
+                        text-align: left;
+                    }
+                }
+
+                @media(max-width: $small){
+                    text-align: left !important;
+                }
+            }
+
+            & .navi{
+
+                @media(max-width: $small){
+
+                    text-align: left;
+                    font-size: 15.5px;
+                }
+            }
+        }
+    }
+}

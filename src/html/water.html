@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Питьевая вода"})
+</head>
+<body>
+    @@include('./parts/header.html')
+    <main>
+        <div class="global-wrapper" id="product-list">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="breadcrumbs">
+                                <li class="crumb crumb-home"><a href="/"><i class="mdi mdi-home"></i></a></li>
+                                <li class="crumb"><a href="/">Главная</a></li>
+                                <li class="crumb-separator">/</li>
+                                <li class="crumb"><a href="/water.html">Каталог</a></li>
+                                <li class="crumb-separator">/</li>
+                                <li class="crumb crumb-current"><a href="/water.html">Питьевая вода</a></li>
+                                <li class="crumb crumb-more">
+                                    <a>
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </a>
+                                    <ul>
+                                        <li><a href="/">Главная</a></li>
+                                        <li><a href="/water.html">Каталог</a></li>
+                                        <li><a href="/water.html">Питьевая вода</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col s12">
+                            <h1>Питьевая вода</h1>
+                        </div>
+                    </div>
+                    <div class="row flex">
+                        @@loop('./parts/list-card-multiple-prices.html', './data/production_water.json')
+                    </div>
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <ul class="pagination">
+                                <li class="page"><a href="">1</a></li>
+                                <li class="page-dots">…</li>
+                                <li class="page active"><a href="">23</a></li>
+                                <li class="page"><a href="">24</a></li>
+                                <li class="page"><a href="">25</a></li>
+                                <li class="page-dots">…</li>
+                                <li class="page"><a href="">200</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "checked": "checked",
+        "extraClass": "",
+        "label": "Наличными курьеру",
+        "prefix": "paymnt"
+    },
+    {
+        "id":2,
+        "checked": "",
+        "extraClass": "",
+        "label": "Картой онлайн",
+        "prefix": "paymnt"
+    }
+]

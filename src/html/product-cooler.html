@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Страница продукции"})
+</head>
+<body>
+    @@include('./parts/header.html')
+    <main>
+        <div class="global-wrapper" id="product">
+            <section>
+                <div class="container">
+                    <div class="row flex">
+                        <div class="col xl6 l8 m7 product-content">
+                            <h1>
+                                <strong>Smixx 178 ld</strong>
+                                <span>Кулер</span>
+                            </h1>
+                            <div class="chars">
+                                <div class="char">
+                                    <div class="key">Тип кулера</div>
+                                    <div class="value">Напольный</div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Тип охлаждения</div>
+                                    <div class="value">Электронное</div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Функции</div>
+                                    <div class="value">Охлаждение и нагрев</div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Нажатие</div>
+                                    <div class="value">Кружкой </div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Габариты</div>
+                                    <div class="value">980х340х310</div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Мощность нагрева</div>
+                                    <div class="value">550 Вт</div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Мощность охлаждения</div>
+                                    <div class="value">70 Вт</div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Температура гор. воды</div>
+                                    <div class="value">≥ 95°С</div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Произв-ть гор. воды</div>
+                                    <div class="value">5 л/ч</div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Температура хол. воды</div>
+                                    <div class="value">≥ 12°С</div>
+                                </div>
+                                <div class="char">
+                                    <div class="key">Произв-ть хол. воды</div>
+                                    <div class="value">0,7 л/ч</div>
+                                </div>
+                            </div>
+                            <div class="cart">
+                                <span class="price-prefix">
+                                    цена
+                                </span>
+                                <span class="price">
+                                    1 700₽
+                                </span>
+                                <a class="btn">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="col l4 m5 product-image-wrapper">
+                            <div class="product-image"></div>
+                            <ul class="gallery-pagination">
+                                <li class="active"><a data-img="/img/fish/cooler-1-1.png"></a></li>
+                                <li><a data-img="/img/fish/cooler-2-1.png"></a></li>
+                                <li><a data-img="/img/fish/cooler-2-2.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="col l2 hide-xl-down">
+                            <div class="lazy" id="bubbles" data-src="/img/bubbles.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            @@include('./parts/popular-water-slider.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

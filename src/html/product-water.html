@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Страница продукции"})
+</head>
+<body>
+    @@include('./parts/header.html')
+    <main>
+        <div class="global-wrapper" id="product">
+            <section>
+                <div class="container">
+                    <div class="row flex">
+                        <div class="col xl5 l8 m7 s12">
+                            <div class="product-content">
+                                <div class="header">
+                                    <h1>
+                                        <strong>Горный воздух</strong>
+                                        <span>Питьевая вода</span>
+                                    </h1>
+                                </div>
+                                <div class="description">
+                                    <p>
+                                        Питьевая вода «Крастальная» – это натуральная природная 
+                                        питьевая вода из артезианской скважины Апшеронского 
+                                        водоносного слоя известного своим стабильным содержанием 
+                                        кальция, натрия и других необходимых для организма 
+                                        человека полезных веществ. Содержащиеся в воде микроэлементы 
+                                        способствуют повышению иммунитета и жизненного тонуса. 
+                                    </p>
+                                </div>
+                                <div class="price-mobile hide-xl-up">
+                                    @@include('./parts/prices.html')
+                                </div>
+                                <div class="cart">
+                                    <div class="input-field price-input">
+                                        <input type="text" class="styled" placeholder="Кол-во">
+                                        <label for="">Кол-во</label>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn">В корзину</a>
+                                        <a href="/checkout.html" class="btn"><span class="hide-l-down">Купить в</span><span class="hide-l-up">В</span> 1 клик</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col xl2 price-desktop hide-xl-down">
+                            @@include('./parts/prices.html')
+                        </div>
+                        <div class="col xl3 l4 m5 product-image-wrapper">
+                            <div class="product-image lazy" data-src="/img/fish/water.png"></div>
+                        </div>
+                        <div class="col xl2 hide-xl-down">
+                            <div class="lazy" id="bubbles" data-src="/img/bubbles.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            @@include('./parts/popular-coolers-slider.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

@@ -1,0 +1,112 @@
+@mixin radio($char, $checkedChar){
+
+    display: none;
+        
+    & ~ label{
+        
+        user-select: none;
+        cursor: pointer;
+
+        &:before{
+
+            font-size: 18px;
+            content: $char;
+            font-family: 'Material Design Icons';
+            margin-right: 6px;
+            color: $call-to-action;
+        }
+
+        &:hover{
+
+            color: $call-to-action;
+        }
+    }
+
+    &:checked ~ label{
+
+        &:before{
+
+            content: $checkedChar;
+        }
+    }
+}
+
+.input-field{
+   
+    display: block;
+    border-bottom: 1px solid $text;
+    position: relative;
+    padding-top: 16px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+    & input[type=text],
+    & input[type=email],
+    & input[type=password],
+    & input[type=number],
+    & input[type=tel],
+    & input[type=phone],
+    & textarea
+    {
+        
+        &.styled{
+
+            border: 0;
+            padding: 0;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: 'Montserrat';
+            width: 100%;
+            background: transparent;
+
+            &:focus{
+
+                outline: none;
+            }
+
+            & ~ label{
+                position: absolute;
+                left: 0;
+                top: 16px;
+                transition: top .2s, line-height .2s, font-size .2s;
+                pointer-events: none;
+            }
+
+            &::placeholder{
+                color: transparent;
+            }
+
+            &:focus, &:not(:placeholder-shown){
+
+                & ~ label{
+
+                    font-size: 12px;
+                    line-height: 12px;
+                    top: 0;
+                }
+            }
+
+            & ~ .error{
+                position: absolute;
+                font-size: 12px;
+                line-height: 12px;
+                top: calc(100% + 4px);
+                color: red;
+            }
+        }
+    }
+
+}
+
+.check-field{
+
+    & input[type=checkbox]{
+        
+        @include radio('\F0131', '\F0135');
+    }
+
+    & input[type=radio]{
+
+        @include radio('\F043D', '\F043E');
+    }
+}

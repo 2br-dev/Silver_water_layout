@@ -1,0 +1,228 @@
+.global-wrapper#product{
+
+    & .chars{
+
+        columns: 3;
+
+
+        @media(max-width: $large){
+            columns: 2;
+        }
+
+        @media(max-width: $small){
+            columns: 1;
+        }
+
+        & .char{
+
+            margin-bottom: 20px;
+
+            & .key, & .value{
+                font-size: 14px;
+                padding-right: 20px;
+
+                @media(max-width: $medium){
+                    padding: 0;
+                    display: block;
+                }
+            }
+
+            & .value{
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    & .product-image{
+
+        padding-top: 120%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image .4s;
+    }
+
+    & .product-image-wrapper{
+
+        @media(max-width: $medium){
+            order: -1;
+        }
+    }
+
+    & .gallery-pagination{
+
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+
+        & li{
+
+            padding: 0 10px;
+            flex-grow: 1;
+            max-width: 100px;
+            
+            & a{
+                padding: 16px 6px;
+                display: block;
+
+                &:before{
+                    background: $fogged;
+                    content: '';
+                    display: block;
+                    height: 6px;
+                    position: relative;
+                    transform: translateY(calc(-50% + 3px));
+                    border-radius: 6px;
+                    transition: background-color .2s;
+                }
+            }
+            
+            &.active{
+
+                & a{
+                    
+                    &:before{
+                        background: $call-to-action;
+                    }
+                }
+            }
+
+            &:not(.active) a:hover:before{
+                background: darken($fogged, 20);
+            }
+        }
+    }
+
+    & #bubbles{
+        padding-top: 180%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    & .buttons{
+        display: inline-block;
+
+        @media(max-width: $medium){
+            display: block;
+        }
+    }
+
+    & .product-content{
+    
+        & .cart{
+
+            flex-grow: 1;
+            margin: 40px 0;
+
+            & .price-prefix{
+                font-weight: 700;
+                font-size: 21px;
+            }
+
+            & .price{
+                font-weight: 700;
+                font-size: 32px;
+            }
+
+            & .price-input{
+                width: 80px;
+
+                & input{
+
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+            }
+
+            @media(max-width: $medium){
+
+                .price-prefix{
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    & .price-desktop{
+            
+        padding: 20px 0;
+        flex-grow: 1;
+
+        & .prices-head{
+            font-size: 18px;
+            font-weight: 700;
+
+        }
+
+        text-align: center;
+        
+        & .pricelist{
+
+            & li{
+
+                margin-bottom: 10px;
+
+                & .bottle-count{
+                    color: $fogged;
+                    padding-right: 20px;
+                    display: inline-block;
+                }
+                
+                & .price-value{
+                    font-size: 32px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    & .price-mobile{
+
+        & .prices-head{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        & .pricelist{
+
+            margin: 0;
+            display: flex;
+
+            & li{
+
+                & .bottle-count{
+
+                    font-size: 14px;
+                    color: $fogged;
+                    padding: 6px;
+                }
+                
+                @media(max-width: $medium){
+                    
+                    flex-grow: 1;
+                    
+                    & .bottle-count{
+                        display: block;
+                    }
+
+                }
+
+                & .price-value{
+
+                    padding: 6px;
+                    font-size: 36px;
+                    font-weight: 700;
+                    white-space: nowrap;
+
+                    @media(max-width: $large){
+
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+}

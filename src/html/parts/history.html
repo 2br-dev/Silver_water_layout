@@ -1,0 +1,15 @@
+<table class="history">
+    <thead>
+        <th>№</th>
+        <th>Дата</th>
+        <th>Сумма</th>
+        <th class="hide-m-down">Статус</th>
+        <th>Счет</th>
+        <th class="hide-m-down">Оплата</th>
+        <th class="hide-m-down">Доставка</th>
+        <th></th>
+    </thead>
+    <tbody>
+        @@loop('./row.html', './data/checkout.json')
+    </tbody>
+</table>

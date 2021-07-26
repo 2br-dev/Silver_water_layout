@@ -1,0 +1,88 @@
+.global-wrapper#account{
+    
+    border: 1px solid green;
+
+    & form#profile{
+
+        & .input-field{
+            width: 100%;
+        }
+
+        & [data-group]{
+            display: none;
+
+            &.visible{
+                display: block;
+            }
+        }
+    }
+
+    & .actions-wrapper{
+
+        text-align: right;
+        position: relative;
+        margin: 0;
+        
+        & > a{
+            line-height: 30px;
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+        }
+        
+        & .actions{
+            position: absolute;
+            text-align: right;
+            margin: 0;
+            opacity: 0;
+            pointer-events: none;
+            right: 0;
+            z-index: 20;
+            transform: translateY(-20px);
+            transition: transform .3s, opacity .3s;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(black, .3);
+            background: #fff;
+
+            & a{
+                display: block;
+                white-space: nowrap;
+                padding: 0 10px;
+                background: #ffffff;
+                line-height: 40px;
+                text-align: left;
+
+                &:hover{
+                    background: rgba(black, .1);
+                }
+            }
+        }
+
+        &:hover .actions{
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0);
+
+        }
+    }
+
+    @media(max-width: $medium){
+
+        & .subtable-wrapper{
+            max-width: calc(100vw - 46px);
+            overflow-x: auto;
+            box-shadow: 0 0 4px rgba(black, .4) inset;
+            padding: 0 10px;
+        }
+
+        & tr{
+            
+            & td{
+                
+                white-space: nowrap;
+            }
+        }
+    }
+
+}

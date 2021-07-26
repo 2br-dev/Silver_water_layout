@@ -1,0 +1,103 @@
+$border-radius: 6px;
+
+.global-wrapper#product-list{
+
+    & .col{
+
+        margin-bottom: 1.5rem;
+
+        & .product-card{
+            height: 100%;
+        }
+    }
+
+    & .filters{
+
+        & .filter{
+
+            display: inline-flex;
+            line-height: 30px;
+            border-radius: $border-radius;
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 20px;
+            user-select: none;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+
+            & span{
+                padding: 0 10px;
+                color: $primary;
+                border: 1px solid $call-to-action;
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+                display: block;
+                position: relative;
+                background-color: #eee;
+                box-shadow: 0 0 6px rgba(black, .3) inset;
+            }
+            
+            & a{
+                padding: 0 10px;
+                border: 1px solid $call-to-action;
+                display: block;
+                color: $call-to-action;
+
+                &:last-of-type{
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+
+                & i{
+                    font-family: 'Material Design Icons';
+                    font-style: normal;
+                    font-size: 20px;
+
+                    &:before{
+                        content: '\F0131';
+                    }
+                }
+
+                &.active{
+                    background: $call-to-action;
+                    color: #fff;
+
+                    & i{
+
+                        &:before{
+                            content: '\F0132';
+                        }
+                    }
+                }
+            }
+
+            @media(max-width: $small){
+                width: 100%;
+                flex-wrap: wrap;
+
+                & span{
+                    width: 100%;
+                    border-bottom-left-radius: 0;
+                    border-top-right-radius: $border-radius;
+                    text-align: center;
+                }
+
+                & a{
+                    border-radius: 0;
+                    flex-grow: 1;
+                    text-align: center;
+                    
+                    &:first-of-type{
+                        border-bottom-left-radius: $border-radius;
+                    }
+                    
+                    &:last-of-type{
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: $border-radius;
+                    }
+                }
+            }
+        }
+    }
+
+}
