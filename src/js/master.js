@@ -5,7 +5,7 @@ $(() => {
     $('body').on('click', '.filter a', setFilter);
     $('body').on('click', '.filter span', cycleFilter);
     $('body').on('click', '.gallery-pagination a', setGalleryImage);
-    $('body').on('change', '[name="addr"]', updateAddressField);
+    $('body').on('change', '[name="use_addr"]', updateAddressField);
     $('body').on('change', '.toggle-group', toggleGroup);
     $('body').on('click', '.history>tbody>tr', expandDetails);
     $('body').on('click', '.tabs-href', selectProductTab)
@@ -114,7 +114,7 @@ function toggleGroup(e){
 	$('[data-group="'+group+'"]').toggleClass('visible');
 }
 function updateAddressField(e){
-	if($(this).val() == 'user-address'){
+	if($(this).val() == 0){
 		$('#user-address').removeClass('hidden');
 	}else{
 		$('#user-address').addClass('hidden');
