@@ -10625,14 +10625,14 @@
 })));
 
 $.fn.hyphenate=function(){var e="[абвгдеёжзийклмнопрстуфхцчшщъыьэюя]";var t="[аеёиоуыэюя]";var n="[бвгджзклмнпрстфхцчшщ]";var r="[йъь]";var i="­";var s=new RegExp("("+r+")("+e+e+")","ig");var o=new RegExp("("+t+")("+t+e+")","ig");var u=new RegExp("("+t+n+")("+n+t+")","ig");var a=new RegExp("("+n+t+")("+n+t+")","ig");var f=new RegExp("("+t+n+")("+n+n+t+")","ig");var l=new RegExp("("+t+n+n+")("+n+n+t+")","ig");this.each(function(){var e=$(this).html();e=e.replace(s,"$1"+i+"$2");e=e.replace(o,"$1"+i+"$2");e=e.replace(u,"$1"+i+"$2");e=e.replace(a,"$1"+i+"$2");e=e.replace(f,"$1"+i+"$2");e=e.replace(l,"$1"+i+"$2");$(this).html(e)})}
-var sidenav, popularWaterSlider, popularCoolerSlider, tabs, modal;
+var sidenav, popularWaterSlider, popularCoolerSlider, tabs, modal, datepicker;
 
 $(() => {
     $(window).on('scroll', updateNavbar);
     $('body').on('click', '.filter a', setFilter);
     $('body').on('click', '.filter span', cycleFilter);
     $('body').on('click', '.gallery-pagination a', setGalleryImage);
-    $('body').on('change', '[name="addr"]', updateAddressField);
+    $('body').on('change', '[name="use_addr"]', updateAddressField);
     $('body').on('change', '.toggle-group', toggleGroup);
     $('body').on('click', '.history>tbody>tr', expandDetails);
     $('body').on('click', '.tabs-href', selectProductTab)
@@ -10674,6 +10674,70 @@ function init(){
             backgroundImage: "url(" + img + ")"
         })
     }
+
+    datepicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
+        firstDay: 1,
+        container: 'body',
+        format: 'dd mmmm yyyy',
+        i18n:{
+            'months': [
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь'
+            ],
+            monthsShort:[
+                'Янв',
+                'Фев',
+                'Мрт',
+                'Апр',
+                'Май',
+                'Июн',
+                'Июл',
+                'Авг',
+                'Сен',
+                'Окт',
+                'Ноя',
+                'Дек'
+            ],
+            weekdays:[
+                'Воскресенье',
+                'Понедельник',
+                'Вторник',
+                'Среда',
+                'Четверг',
+                'Пятница',
+                'Суббота'
+            ],
+            weekdaysShort:[
+                'Вс',
+                'Пн',
+                'Вт',
+                'Ср',
+                'Чт',
+                'Пт',
+                'Сб'
+            ],
+            weekdaysAbbrev:[
+                'В',
+                'П',
+                'В',
+                'С',
+                'Ч',
+                'П',
+                'С'
+                
+            ]
+        }
+    });
 
 }
 
@@ -10741,7 +10805,7 @@ function toggleGroup(e){
 	$('[data-group="'+group+'"]').toggleClass('visible');
 }
 function updateAddressField(e){
-	if($(this).val() == 'user-address'){
+	if($(this).val() == 0){
 		$('#user-address').removeClass('hidden');
 	}else{
 		$('#user-address').addClass('hidden');
@@ -10835,6 +10899,7 @@ function swiperOptions(paginationEl){
         }
     }
 }
+
 function brand(){
     console.log(`
          ///////

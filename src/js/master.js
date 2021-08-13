@@ -1,4 +1,4 @@
-var sidenav, popularWaterSlider, popularCoolerSlider, tabs, modal;
+var sidenav, popularWaterSlider, popularCoolerSlider, tabs, modal, datepicker;
 
 $(() => {
     $(window).on('scroll', updateNavbar);
@@ -47,6 +47,70 @@ function init(){
             backgroundImage: "url(" + img + ")"
         })
     }
+
+    datepicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
+        firstDay: 1,
+        container: 'body',
+        format: 'dd mmmm yyyy',
+        i18n:{
+            'months': [
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь'
+            ],
+            monthsShort:[
+                'Янв',
+                'Фев',
+                'Мрт',
+                'Апр',
+                'Май',
+                'Июн',
+                'Июл',
+                'Авг',
+                'Сен',
+                'Окт',
+                'Ноя',
+                'Дек'
+            ],
+            weekdays:[
+                'Воскресенье',
+                'Понедельник',
+                'Вторник',
+                'Среда',
+                'Четверг',
+                'Пятница',
+                'Суббота'
+            ],
+            weekdaysShort:[
+                'Вс',
+                'Пн',
+                'Вт',
+                'Ср',
+                'Чт',
+                'Пт',
+                'Сб'
+            ],
+            weekdaysAbbrev:[
+                'В',
+                'П',
+                'В',
+                'С',
+                'Ч',
+                'П',
+                'С'
+                
+            ]
+        }
+    });
 
 }
 

@@ -187,55 +187,58 @@ body{
 
     & table{
 
-        width: 100%;
-        border-spacing: 0;
-        border-collapse: collapse;
+        &.styled{
 
-        & tr{
-            & th, td{
-
-                &:not([colspan]){
-                    border-top: 1px solid $fogged;
-                    padding: 6px;
-
-                    &:not(:last-of-type){
-                        border-right: 1px dotted $fogged;
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+    
+            & tr{
+                & th, td{
+    
+                    &:not([colspan]){
+                        border-top: 1px solid $fogged;
+                        padding: 6px;
+    
+                        &:not(:last-of-type){
+                            border-right: 1px dotted $fogged;
+                        }
+                    }
+    
+                    &[colspan]{
+                        
+                        padding: 0;
+    
+                        & .subtable-wrapper{
+                            display: none;
+                        }
                     }
                 }
-
-                &[colspan]{
-                    
-                    padding: 0;
-
-                    & .subtable-wrapper{
-                        display: none;
+            }
+    
+            & > tbody > tr{
+    
+                cursor: pointer;
+    
+                &:hover > td:not([colspan]){
+                    color: $primary;
+                }
+                
+    
+                &:first-of-type{
+                    border-left: 2px solid transparent;
+                }
+    
+                &.active{
+    
+                    & td:first-of-type, & + tr > td:first-of-type{
+    
+                        border-left: 2px solid $primary;
                     }
-                }
-            }
-        }
-
-        & > tbody > tr{
-
-            cursor: pointer;
-
-            &:hover > td:not([colspan]){
-                color: $primary;
-            }
-            
-
-            &:first-of-type{
-                border-left: 2px solid transparent;
-            }
-
-            &.active{
-
-                & td:first-of-type, & + tr > td:first-of-type{
-
-                    border-left: 2px solid $primary;
-                }
-
-                & + tr .subtable-wrapper{
-                    background: rgba(black, .05);
+    
+                    & + tr .subtable-wrapper{
+                        background: rgba(black, .05);
+                    }
                 }
             }
         }
@@ -269,6 +272,10 @@ body{
         width: 480px;
         max-width: 100%;
 
+        &.datepicker-modal{
+            width: fit-content;
+        }
+
         & .closer{
 
             position: absolute;
@@ -291,5 +298,11 @@ body{
 
     & .no-padding{
         padding: 0 !important;
+    }
+
+
+    & .datepicker-calendar-container{
+        padding: 1.2rem;
+        box-sizing: border-box;
     }
 }
