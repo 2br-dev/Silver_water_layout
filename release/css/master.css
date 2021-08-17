@@ -24495,3 +24495,8 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
     .global-wrapper#hero-pages section#hero {
       height: 50vw;
       min-height: 350px; } }
+
+.global-wrapper#contacts #map {
+  height: 50vh; }
+  .global-wrapper#contacts #map .ol-overlaycontainer-stopevent {
+    display: none; }

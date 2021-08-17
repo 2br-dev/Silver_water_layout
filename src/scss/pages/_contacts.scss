@@ -1,0 +1,11 @@
+.global-wrapper#contacts{
+
+    & #map{
+
+        height: 50vh;
+
+        & .ol-overlaycontainer-stopevent{
+            display: none;
+        }
+    }
+}
