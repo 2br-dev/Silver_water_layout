@@ -23167,26 +23167,43 @@ header {
   z-index: 80; }
   header .nav-separator {
     padding: 0 20px; }
-    @media (max-width: 1900px) {
-      header .nav-separator {
-        display: none; } }
   header .top a, header .main-navi a {
     border-radius: 6px;
-    transition: background-color .2s; }
+    transition: background-color .2s;
+    white-space: nowrap; }
     header .top a:hover, header .main-navi a:hover {
       background: rgba(0, 0, 0, 0.2); }
   header .top {
     display: flex;
     flex-wrap: wrap; }
+    header .top a:hover {
+      background: transparent;
+      text-decoration: underline; }
     header .top .accent {
       flex-grow: 1;
       line-height: 54px;
-      padding: 0 20px; }
+      padding: 0 20px;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500; }
       @media (max-width: 1470px) {
-        header .top .accent {
-          text-align: center; }
-          header .top .accent + ul {
+        header .top .accent + ul {
+          display: none; } }
+    header .top .header-phones {
+      display: inline-flex;
+      border-right: 1px dashed #ccc; }
+      @media (max-width: 800px) {
+        header .top .header-phones {
+          display: flex; }
+          header .top .header-phones .header-phone:last-of-type:after {
             display: none; } }
+      header .top .header-phones .header-phone {
+        font-size: 16px;
+        white-space: nowrap; }
+        @media (max-width: 800px) {
+          header .top .header-phones .header-phone {
+            line-height: 20px;
+            font-size: 14px; } }
     @media (max-width: 1200px) {
       header .top {
         text-align: center;
@@ -23194,13 +23211,18 @@ header {
         header .top .accent {
           line-height: 1.2rem;
           padding: 19px 0; } }
+    @media (max-width: 1470px) {
+      header .top .accent {
+        text-align: center; }
+      header .top .global-nav {
+        display: none; } }
     header .top ul {
       margin: 0;
       display: flex;
       line-height: 54px;
       padding: 0 20px; }
       header .top ul li a {
-        padding: 6px 12px; }
+        padding: 6px 0px; }
   header nav {
     background: #1338BD url(../img/mountains.png);
     background-blend-mode: multiply;
@@ -23209,6 +23231,9 @@ header {
     transition: background-color .4s, background-image .4s, top .4s;
     position: relative;
     top: 0; }
+    @media (max-width: 1900px) {
+      header nav .nav-separator {
+        display: none; } }
     header nav a {
       color: #fff;
       padding: 6px 12px; }
@@ -23423,6 +23448,25 @@ header {
   background: rgba(0, 0, 0, 0.1); }
   .sidenav .folder ul li a {
     padding-left: 50px; }
+
+.fab {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 50%;
+  background: #0EC8A6;
+  transform: scaleX(-1);
+  position: fixed;
+  z-index: 20;
+  bottom: 5vw;
+  right: 5vw; }
+  @media (min-width: 1470px) {
+    .fab {
+      display: none; } }
+  .fab i {
+    color: #fff; }
 
 body {
   display: flex;
@@ -24123,11 +24167,16 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
           width: 80px;
           line-height: 76px; } }
   .global-wrapper#main section#features .col .feature-name {
-    text-align: center; }
+    text-align: center;
+    max-width: 100%; }
+    @media (max-width: 800px) {
+      .global-wrapper#main section#features .col .feature-name {
+        text-transform: uppercase;
+        font-size: 14px; } }
 
 .global-wrapper#main section#delivery-terms {
   background: linear-gradient(to bottom, #79A8DC, #ADCFED, #E7F4FF);
-  padding: 0; }
+  padding: 40px 0; }
   .global-wrapper#main section#delivery-terms .row {
     align-items: center; }
   .global-wrapper#main section#delivery-terms .lazy {

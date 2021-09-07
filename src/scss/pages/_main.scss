@@ -188,8 +188,14 @@
                 }
     
                 & .feature-name{
-    
                     text-align: center;
+                    max-width: 100%;
+
+                    @media(max-width: $medium){
+                        text-transform: uppercase;
+
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -197,7 +203,7 @@
 
         &#delivery-terms{
             background: linear-gradient(to bottom, #79A8DC, #ADCFED, #E7F4FF);
-            padding: 0;
+            padding: 40px 0;
 
             & .row{
                 align-items: center;

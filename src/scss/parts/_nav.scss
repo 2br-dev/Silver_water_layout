@@ -22,10 +22,6 @@ header{
 
     & .nav-separator{
         padding: 0 20px;
-
-        @media(max-width: $extra-large){
-            display: none;
-        }
     }
 
     & .top, & .main-navi{
@@ -34,6 +30,7 @@ header{
     
             border-radius: 6px;
             transition: background-color .2s;
+            white-space: nowrap;
             
             &:hover{
                 background: rgba(black, .2);
@@ -46,15 +43,22 @@ header{
         display: flex;
         flex-wrap: wrap;
 
+        & a:hover{
+            background: transparent;
+            text-decoration: underline;
+        }
+
         & .accent{
 
             flex-grow: 1;
             line-height: 54px;
             padding: 0 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+
 
             @media(max-width: $tablet-edge){
-
-                text-align: center;
 
                 & + ul{
     
@@ -62,6 +66,38 @@ header{
                 }
             }
 
+        }
+
+        & .header-phones{
+
+            display: inline-flex;
+            border-right: 1px dashed #ccc;
+
+            @media(max-width: $medium){
+                display: flex;
+
+                & .header-phone{
+
+                    &:last-of-type{
+                        
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            & .header-phone{
+                
+                font-size: 16px;
+                white-space: nowrap;
+
+                @media(max-width: $medium){
+                    
+                    line-height: 20px;
+                    font-size: 14px;
+                }
+            }
         }
 
         @media(max-width: $large){
@@ -74,6 +110,17 @@ header{
             }
         }
 
+        @media(max-width: $tablet-edge){
+
+            & .accent{
+                text-align: center;
+            }
+
+            & .global-nav{
+                display: none;
+            }
+        }
+
         & ul{
             margin: 0;
             display: flex;
@@ -83,7 +130,7 @@ header{
             & li{
 
                 & a{
-                    padding: 6px 12px;
+                    padding: 6px 0px;
                 }
             }
         }
@@ -98,6 +145,13 @@ header{
         transition: background-color .4s, background-image .4s, top .4s;
         position: relative;
         top: 0;
+        
+        & .nav-separator{
+
+            @media(max-width: $extra-large){
+                display: none;
+            }
+        }
         
         & a{
             color: #fff;
@@ -439,5 +493,29 @@ header{
                 }
             }
         }
+    }
+}
+
+.fab{
+
+    @media(min-width: $tablet-edge){
+        display: none;
+    }
+
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 50%;
+    background: $call-to-action;
+    transform: scaleX(-1);
+    position: fixed;
+    z-index: 20;
+    bottom: 5vw;
+    right: 5vw;
+
+    & i{
+        color: #fff;
     }
 }
