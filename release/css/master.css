@@ -23162,6 +23162,162 @@ button.swiper-pagination-bullet {
   .hide-h {
     display: none; } }
 
+@media (max-width: 600px) {
+  .align-left-s-down {
+    text-align: left; } }
+
+@media (min-width: 600px) {
+  .align-left-s-up {
+    text-align: left; } }
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .align-left-s-only {
+    text-align: left; } }
+
+@media (max-width: 600px) {
+  .align-center-s-down {
+    text-align: center; } }
+
+@media (min-width: 600px) {
+  .align-center-s-up {
+    text-align: center; } }
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .align-center-s-only {
+    text-align: center; } }
+
+@media (max-width: 600px) {
+  .align-right-s-down {
+    text-align: right; } }
+
+@media (min-width: 600px) {
+  .align-right-s-up {
+    text-align: right; } }
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .align-right-s-only {
+    text-align: right; } }
+
+@media (max-width: 800px) {
+  .align-left-m-down {
+    text-align: left; } }
+
+@media (min-width: 800px) {
+  .align-left-m-up {
+    text-align: left; } }
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .align-left-m-only {
+    text-align: left; } }
+
+@media (max-width: 800px) {
+  .align-center-m-down {
+    text-align: center; } }
+
+@media (min-width: 800px) {
+  .align-center-m-up {
+    text-align: center; } }
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .align-center-m-only {
+    text-align: center; } }
+
+@media (max-width: 800px) {
+  .align-right-m-down {
+    text-align: right; } }
+
+@media (min-width: 800px) {
+  .align-right-m-up {
+    text-align: right; } }
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .align-right-m-only {
+    text-align: right; } }
+
+@media (max-width: 1200px) {
+  .align-left-l-down {
+    text-align: left; } }
+
+@media (min-width: 1200px) {
+  .align-left-l-up {
+    text-align: left; } }
+
+@media (min-width: 1200px) and (max-width: 1900px) {
+  .align-left-l-only {
+    text-align: left; } }
+
+@media (max-width: 1200px) {
+  .align-center-l-down {
+    text-align: center; } }
+
+@media (min-width: 1200px) {
+  .align-center-l-up {
+    text-align: center; } }
+
+@media (min-width: 1200px) and (max-width: 1900px) {
+  .align-center-l-only {
+    text-align: center; } }
+
+@media (max-width: 1200px) {
+  .align-right-l-down {
+    text-align: right; } }
+
+@media (min-width: 1200px) {
+  .align-right-l-up {
+    text-align: right; } }
+
+@media (min-width: 1200px) and (max-width: 1900px) {
+  .align-right-l-only {
+    text-align: right; } }
+
+@media (max-width: 1900px) {
+  .align-left-xl-down {
+    text-align: left; } }
+
+@media (min-width: 1900px) {
+  .align-left-xl-up {
+    text-align: left; } }
+
+@media (min-width: 1900px) and (max-width: 1901px) {
+  .align-left-xl-only {
+    text-align: left; } }
+
+@media (max-width: 1900px) {
+  .align-center-xl-down {
+    text-align: center; } }
+
+@media (min-width: 1900px) {
+  .align-center-xl-up {
+    text-align: center; } }
+
+@media (min-width: 1900px) and (max-width: 1901px) {
+  .align-center-xl-only {
+    text-align: center; } }
+
+@media (max-width: 1900px) {
+  .align-right-xl-down {
+    text-align: right; } }
+
+@media (min-width: 1900px) {
+  .align-right-xl-up {
+    text-align: right; } }
+
+@media (min-width: 1900px) and (max-width: 1901px) {
+  .align-right-xl-only {
+    text-align: right; } }
+
+@media (min-width: 1901px) {
+  .align-left-h {
+    text-align: left; } }
+
+@media (min-width: 1901px) {
+  .align-center-h {
+    text-align: center; } }
+
+@media (min-width: 1901px) {
+  .align-right-h {
+    text-align: right; } }
+
 header {
   position: -webkit-sticky;
   z-index: 80; }
@@ -23625,6 +23781,39 @@ body {
   body .datepicker-calendar-container {
     padding: 1.2rem;
     box-sizing: border-box; }
+  body .complectations {
+    margin-bottom: 20px; }
+    body .complectations .complectation {
+      padding: 2px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: #888;
+      background: linear-gradient(to bottom, #fff, #ccc); }
+      body .complectations .complectation.active {
+        background: linear-gradient(to bottom, #aaa, #ccc);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) inset;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+        color: #fff; }
+  body .image-tooltip {
+    display: inline-block;
+    position: relative; }
+    body .image-tooltip .image-tooltip {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border: 6px solid transparent;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity .4s, top .4s;
+      left: calc(50% - 46px);
+      top: -70px; }
+    body .image-tooltip:hover .image-tooltip {
+      opacity: 1;
+      top: -100px; }
 
 body {
   font-size: 16px;

@@ -305,4 +305,50 @@ body{
         padding: 1.2rem;
         box-sizing: border-box;
     }
+
+    & .complectations{
+        margin-bottom: 20px;
+    
+        & .complectation{
+            padding: 2px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #888;
+            background:linear-gradient(to bottom, #fff, #ccc);
+            
+            &.active{
+                background:linear-gradient(to bottom, #aaa, #ccc);
+                box-shadow: 0 2px 4px rgba(black, .3) inset;
+                text-shadow: 0 2px 2px rgba(black, .4);
+                color: #fff;
+            }
+        }
+    }
+
+    & .image-tooltip{
+
+        display: inline-block;
+        position: relative;
+        
+        & .image-tooltip{
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: rgba(black, .7);
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 6px solid transparent;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity .4s, top .4s;
+            left: calc(50% - 46px);
+            top: -70px;
+
+        }
+        &:hover .image-tooltip{
+            opacity: 1;
+            top: -100px;
+        }
+    }
 }

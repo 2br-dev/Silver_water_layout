@@ -156,27 +156,60 @@
 }
 
 
-// Media-queries
+@mixin hide($class, $min, $max){
+	.hide-#{$class}-down{@media(max-width: $min){display: none;}}
+	.hide-#{$class}-up{@media(min-width: $min){display: none;}}
+	.hide-#{$class}-only{@media(min-width: $min) and (max-width: $max){display: none;}}
+}
 
-// Small
-.hide-s-down{@media(max-width: $small){display: none;}}
-.hide-s-up{@media(min-width: $small){display: none;}}
-.hide-s-only{@media(min-width: $small) and (max-width: $medium){display: none;}}
+@mixin left($class, $min, $max){
+	.hide-#{$class}-down{@media(max-width: $min){text-align: left;}}
+	.hide-#{$class}-up{@media(min-width: $min){text-align: left;}}
+	.hide-#{$class}-only{@media(min-width: $min) and (max-width: $max){text-align: left;}}
+}
 
-// Medium
-.hide-m-down{@media(max-width: $medium){display: none;}}
-.hide-m-up{@media(min-width: $medium){display: none;}}
-.hide-m-only{@media(min-width: $medium) and (max-width: $large){display: none;}}
+@mixin center($class, $min, $max){
+	.hide-#{$class}-down{@media(max-width: $min){text-align: center;}}
+	.hide-#{$class}-up{@media(min-width: $min){text-align: center;}}
+	.hide-#{$class}-only{@media(min-width: $min) and (max-width: $max){text-align: center;}}
+}
 
-// Large
-.hide-l-down{@media(max-width: $large){display: none;}}
-.hide-l-up{@media(min-width: $large){display: none;}}
-.hide-l-only{@media(min-width: $large) and (max-width: $extra-large){display: none;}}
+@mixin right($class, $min, $max){
+	.hide-#{$class}-down{@media(max-width: $min){text-align: right;}}
+	.hide-#{$class}-up{@media(min-width: $min){text-align: right;}}
+	.hide-#{$class}-only{@media(min-width: $min) and (max-width: $max){text-align: right;}}
+}
 
-// Extra-large
-.hide-xl-down{@media(max-width: $extra-large){display: none;}}
-.hide-xl-up{@media(min-width: $extra-large){display: none;}}
-.hide-xl-only{@media(min-width: $extra-large) and (max-width: $huge){display: none;}}
+@mixin align($direction, $class, $min, $max){
+	.align-#{$direction}-#{$class}-down{@media(max-width: $min){text-align: #{$direction};}}
+	.align-#{$direction}-#{$class}-up{@media(min-width: $min){text-align: #{$direction};}}
+	.align-#{$direction}-#{$class}-only{@media(min-width: $min) and (max-width: $max){text-align: #{$direction};}}
+}
 
-// Huge{
+@mixin alignFrom($direction, $class, $min){
+	.align-#{$direction}-#{$class}{@media(min-width: $min){text-align: #{$direction};}}
+}
+
+// Hide
+@include hide(s, $small, $medium);
+@include hide(m, $medium, $large);
+@include hide(l, $large, $extra-large);
+@include hide(xl, $extra-large, $huge);
 .hide-h{@media(min-width: $huge){display: none;}}
+
+// Align
+@include align(left, s, $small, $medium);
+@include align(center, s, $small, $medium);
+@include align(right, s, $small, $medium);
+@include align(left, m, $medium, $large);
+@include align(center, m, $medium, $large);
+@include align(right, m, $medium, $large);
+@include align(left, l, $large, $extra-large);
+@include align(center, l, $large, $extra-large);
+@include align(right, l, $large, $extra-large);
+@include align(left, xl, $extra-large, $huge);
+@include align(center, xl, $extra-large, $huge);
+@include align(right, xl, $extra-large, $huge);
+@include alignFrom(left, h, $huge);
+@include alignFrom(center, h, $huge);
+@include alignFrom(right, h, $huge);

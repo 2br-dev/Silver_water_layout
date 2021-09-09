@@ -10644,6 +10644,7 @@ function init(){
     tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
     sidenav = M.Sidenav.init(document.querySelector('.sidenav'));
     modal = M.Modal.init(document.querySelectorAll('.modal'));
+    initImageToolTips();
     
     if($('#popular-water-slider').length){
         let waterOptions = swiperOptions('#water-slider-extras');
@@ -11010,6 +11011,14 @@ function initMap(){
     });
 }
 
+//= Инициализация фото-тултипов ===========================================
+function initImageToolTips(){
+    $('.image-tooltip').each((index, tooltip) => {
+        var url = $(tooltip).data('src');
+        // console.log(url)
+        $(tooltip).prepend($("<div class=\"image-tooltip\" style=\"background-image:url('"+url+"')\">"));
+    })
+}
 function brand(){
     console.log(`
          ///////
