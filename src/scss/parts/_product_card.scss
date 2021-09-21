@@ -61,6 +61,10 @@
 
         & .primary{
 
+            &.action{
+                color: #ca1e1e;
+            }
+
             & .price{
 
                 font-size: 36px;
@@ -81,6 +85,27 @@
                     font-weight: 700;
                     line-height: 24px;
                 }
+            }
+        }
+
+        & .old-price-wrapper{
+            flex-grow: 1;
+            width: 100%;
+            text-align: center;
+
+            & .old-price{
+                border-radius: 8px;
+                border: 2px solid $secondary;
+                color: $secondary;
+                text-decoration: line-through;
+                text-decoration-thickness: 2px;
+                text-decoration-color: darken($secondary, 10);
+                width: fit-content;
+                padding: 0 10px;
+                margin: auto;
+                font-size: 21px;
+                font-weight: 700;
+                transform: rotate(8deg);
             }
         }
     }

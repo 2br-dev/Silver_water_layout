@@ -23394,16 +23394,14 @@ header {
       color: #fff;
       padding: 6px 12px; }
       header nav a.logo {
-        width: 260px;
+        width: 180px;
+        margin-right: 10px;
         background: url(../img/logo_header.svg) center center no-repeat;
-        transition: background-image .4s; }
-        @media (max-width: 1900px) {
-          header nav a.logo {
-            background-size: auto 80%; } }
+        transition: background-image .4s;
+        background-size: contain; }
         @media (max-width: 800px) {
           header nav a.logo {
             background-position: left center;
-            background-size: auto 80%;
             width: 65px;
             background: url(../img/logo_avatar.svg) center center no-repeat; } }
       header nav a i.mdi {
@@ -23963,6 +23961,8 @@ a.btn-flat, button.btn-flat {
     .product-card .prices .primary, .product-card .prices .secondaries {
       width: 50%;
       flex-grow: 1; }
+    .product-card .prices .primary.action {
+      color: #ca1e1e; }
     .product-card .prices .primary .price {
       font-size: 36px;
       font-weight: 700;
@@ -23975,6 +23975,23 @@ a.btn-flat, button.btn-flat {
         font-size: 24px;
         font-weight: 700;
         line-height: 24px; }
+    .product-card .prices .old-price-wrapper {
+      flex-grow: 1;
+      width: 100%;
+      text-align: center; }
+      .product-card .prices .old-price-wrapper .old-price {
+        border-radius: 8px;
+        border: 2px solid #00C2FF;
+        color: #00C2FF;
+        text-decoration: line-through;
+        text-decoration-thickness: 2px;
+        text-decoration-color: #009bcc;
+        width: fit-content;
+        padding: 0 10px;
+        margin: auto;
+        font-size: 21px;
+        font-weight: 700;
+        transform: rotate(8deg); }
   .product-card > .price {
     text-align: center;
     font-size: 32px;

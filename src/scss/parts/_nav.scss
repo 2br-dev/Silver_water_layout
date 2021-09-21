@@ -159,17 +159,15 @@ header{
 
             &.logo{
 
-                width: 260px;
+                width: 180px;
+                margin-right: 10px;
                 background: url(../img/logo_header.svg) center center no-repeat;
                 transition: background-image .4s;
-
-                @media(max-width: $extra-large){
-                    background-size: auto 80%;
-                }
+                background-size: contain;
 
                 @media(max-width: $medium){
                     background-position: left center;
-                    background-size: auto 80%;
+                    // background-size: auto 80%;
                     width: 65px;
                     background: url(../img/logo_avatar.svg) center center no-repeat;
                 }
