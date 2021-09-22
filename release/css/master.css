@@ -23812,6 +23812,35 @@ body {
     body .image-tooltip:hover .image-tooltip {
       opacity: 1;
       top: -100px; }
+  body .price-wrapper > * {
+    width: fit-content;
+    margin: auto; }
+  @media (max-width: 1900px) {
+    body .price-wrapper {
+      display: inline-flex;
+      justify-content: left; }
+      body .price-wrapper > * {
+        margin: 0 6px; } }
+  body .price-wrapper .old-price {
+    margin-bottom: 20px; }
+    body .price-wrapper .old-price span {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: line-through;
+      padding: 0 16px;
+      line-height: 32px;
+      box-shadow: 0 0 0 2px #00C2FF inset;
+      color: #aaa;
+      transform: rotate(-8deg);
+      border-radius: 8px;
+      background: #eaeaea;
+      color: #00C2FF; }
+  body .price-wrapper .new-price {
+    color: #1338BD;
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 46px; }
 
 body {
   font-size: 16px;

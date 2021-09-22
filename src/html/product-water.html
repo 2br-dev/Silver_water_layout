@@ -29,7 +29,13 @@
                                     </p>
                                 </div>
                                 <div class="price-mobile hide-xl-up">
-                                    @@include('./parts/prices.html')
+                                    <div class="hidden">
+                                        @@include('./parts/prices.html')
+                                    </div>
+                                    <div class="price-wrapper">
+                                        <div class="old-price"><span>480₽</span></div>
+                                        <div class="new-price"><span>350₽</span></div>
+                                    </div>
                                 </div>
                                 <div class="cart">
                                     <div class="input-field price-input">
@@ -44,7 +50,13 @@
                             </div>
                         </div>
                         <div class="col xl2 price-desktop hide-xl-down">
-                            @@include('./parts/prices.html')
+                            <div class="hidden">
+                                @@include('./parts/prices.html')
+                            </div>
+                            <div class="price-wrapper">
+                                <div class="old-price"><span>480₽</span></div>
+                                <div class="new-price"><span>350₽</span></div>
+                            </div>
                         </div>
                         <div class="col xl3 l4 m5 product-image-wrapper">
                             <div class="product-image lazy" data-src="/img/fish/water.png"></div>
