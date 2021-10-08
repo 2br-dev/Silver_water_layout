@@ -1,4 +1,4 @@
-var sidenav, popularWaterSlider, popularCoolerSlider, tabs, modal, datepicker;
+var sidenav, popularWaterSlider, popularCoolerSlider, actionsSlider, tabs, modal, datepicker;
 
 $(() => {
     $(window).on('scroll', updateNavbar);
@@ -33,6 +33,24 @@ function init(){
         popularCoolerSlider.on('slideChange', function(){
             $('.lazy').lazy();
         })
+    }
+
+    if($('#actions-slider').length){
+        actionsSlider = new Swiper('#actions-slider', {
+            pagination: {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+            },
+            loop: true,
+            autoplay: {
+                delay: 5000
+            }
+        });
+        actionsSlider.on('slideChange', function(){
+            $('.lazy').lazy();
+        });
+        window.dispatchEvent(new Event('resize'));
     }
 
     $('p').hyphenate();

@@ -29,6 +29,27 @@
                     </div>
                 </div>
             </section>
+            <section class="actions-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 m8 offset-l3 offset-m2">
+                            <div class="actions-slider-wrapper">
+                                <div class="actions-label-wrapper">
+                                    <div class="actions-label">
+                                        <span>Акция</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-container" id="actions-slider">
+                                    <div class="swiper-wrapper">
+                                        @@loop('./parts/action-slide.html', './data/actions-banner.json')
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="popular-water">
                 <div class="container">
                     <div class="row">

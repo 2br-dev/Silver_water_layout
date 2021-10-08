@@ -24294,6 +24294,9 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
   .select-dropdown li.optgroup ~ li.optgroup-option {
     padding-left: 1rem; }
 
+.global-wrapper#main section.actions-section {
+  padding-bottom: 0; }
+
 .global-wrapper#main section#hero {
   background: url(../img/city_panorama.png) center center no-repeat;
   background-size: cover;
@@ -24327,6 +24330,94 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
       height: fit-content; }
       .global-wrapper#main section#hero .container .row .col .monument {
         display: none; } }
+
+.global-wrapper#main section .actions-slider-wrapper {
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.1));
+  display: flex; }
+  .global-wrapper#main section .actions-slider-wrapper .actions-label-wrapper .actions-label {
+    position: relative;
+    width: 60px;
+    height: calc(100% - 120px);
+    background: #1338BD;
+    color: #fff;
+    flex-shrink: 0;
+    margin-top: 20px;
+    display: block;
+    min-height: 180px; }
+    .global-wrapper#main section .actions-slider-wrapper .actions-label-wrapper .actions-label span {
+      display: block;
+      transform: rotate(-90deg) translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      font-size: 36px;
+      transform-origin: top left;
+      position: relative;
+      text-transform: uppercase;
+      font-weight: bold;
+      position: absolute; }
+    @media (max-width: 800px) {
+      .global-wrapper#main section .actions-slider-wrapper .actions-label-wrapper .actions-label {
+        height: calc(100% - 100px); } }
+  @media (max-width: 800px) {
+    .global-wrapper#main section .actions-slider-wrapper {
+      display: block; }
+      .global-wrapper#main section .actions-slider-wrapper .actions-label-wrapper .actions-label {
+        width: 100%;
+        position: relative;
+        margin-bottom: -20px;
+        margin-top: 0;
+        min-height: unset;
+        height: 60px; }
+        .global-wrapper#main section .actions-slider-wrapper .actions-label-wrapper .actions-label span {
+          transform: translate(-50%, -50%); } }
+  .global-wrapper#main section .actions-slider-wrapper #actions-slider {
+    padding: 0;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 80px; }
+    .global-wrapper#main section .actions-slider-wrapper #actions-slider .action-slide {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      width: calc(100% - 140px);
+      min-height: 180px; }
+      @media (max-width: 800px) {
+        .global-wrapper#main section .actions-slider-wrapper #actions-slider .action-slide {
+          flex-direction: column; } }
+      .global-wrapper#main section .actions-slider-wrapper #actions-slider .action-slide .action-image {
+        width: 280px;
+        max-width: 100%;
+        height: 160px;
+        background-size: contain; }
+        .global-wrapper#main section .actions-slider-wrapper #actions-slider .action-slide .action-image .lazy {
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 200px;
+          margin-top: -30px; }
+      .global-wrapper#main section .actions-slider-wrapper #actions-slider .action-slide .action-data {
+        box-sizing: border-box;
+        padding: 20px;
+        width: calc(100% - 20px); }
+        .global-wrapper#main section .actions-slider-wrapper #actions-slider .action-slide .action-data .name {
+          font-size: 32px;
+          color: #1338BD;
+          font-weight: bold;
+          margin-bottom: 10px; }
+          @media (max-width: 800px) {
+            .global-wrapper#main section .actions-slider-wrapper #actions-slider .action-slide .action-data .name {
+              font-size: 24px; } }
+    .global-wrapper#main section .actions-slider-wrapper #actions-slider .swiper-pagination {
+      top: 255px; }
+      @media (max-width: 800px) {
+        .global-wrapper#main section .actions-slider-wrapper #actions-slider .swiper-pagination {
+          top: 380px; } }
+      .global-wrapper#main section .actions-slider-wrapper #actions-slider .swiper-pagination .swiper-pagination-bullet {
+        margin: 0 10px;
+        width: 11px;
+        height: 11px; }
+        .global-wrapper#main section .actions-slider-wrapper #actions-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+          background: #0EC8A6; }
 
 .global-wrapper#main section#water-delivery .row.flex {
   align-items: center;
