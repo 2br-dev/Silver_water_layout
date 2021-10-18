@@ -7,7 +7,6 @@
             padding-bottom: 0;
         }
 
-
         &#hero{
         
             height: fit-content;
@@ -42,7 +41,7 @@
                             }
     
                             &.big{
-                                color: #1338BD;
+                                color: $primary;
                             }
                         }
                     }
@@ -53,7 +52,7 @@
                         margin-bottom: 40px;
                         font-size: 21px;
                         font-weight: bold;
-                        color: #1338BD;
+                        color: $primary;
 
                         @media(max-width: $medium){
                             font-size: 16px;
@@ -83,7 +82,6 @@
                 }
             }
         }
-        
 
         &#water-delivery{
 
