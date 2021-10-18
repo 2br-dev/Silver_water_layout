@@ -9,206 +9,75 @@
 
 
         &#hero{
-            background: url(../img/city_panorama.png) center center no-repeat;
-            background-size: cover;
-            height: 752px;
-            margin-bottom: 60px;
-
-            & .container{
-
-                height: 100%;
-
-                & .row{
-
-                    height: 100%;
-                    align-items: center;
-
-                    & .col{
-
-                        & h1{
-
-                            & strong, & span{
-                                display: block;
-
-                                @media(max-width: $small){
-                                    text-align: center;
-                                }
-                            }
-                        }
-
-                        & .actions-wrapper{
-                            display: block;
-                            margin-top: 50px;
-                        }
-
-                        & .monument{
-                            padding-top: 75%;
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                            width: 80%;
-                            margin: auto;
-                            transform: translateY(100px);
-
-                            @media(max-width: $large){
-                                display: none !important;
-                            }
-                        }
-                    }
-                }
-            }
-
-            @media(max-width: $tablet-edge){
-
-                height: fit-content;
-
-                & .container{
-
-                    & .row{
-
-                        & .col{
-
-                            & .monument{
-                                
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        & .actions-slider-wrapper{
-    
-            filter: drop-shadow(0 4px 14px rgba(black, .1));
-            
+        
+            height: fit-content;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: -96px;
             display: flex;
-            
-            & .actions-label-wrapper{
-            
-                & .actions-label{
-                    
-                    position: relative;
-                    width: 60px;
-                    height: calc(100% - 120px);
-                    background: #1338BD;
-                    color: #fff;
-                    flex-shrink: 0;
-                    margin-top: 20px;
-                    display: block;
-                    min-height: 180px;
-                    
-                    & span{
-                        display: block;
-                        transform: rotate(-90deg) translate(-50%, -50%);
-                        top: 50%;
-                        left: 50%;
-                        font-size: 36px;
-                        transform-origin: top left;
-                        position: relative;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        position: absolute;
-                    }
-
-                    @media(max-width: $medium){
-                        height: calc(100% - 100px);
-                    }
-                }
-            }
+            align-items: center;
+            padding: 10vw;
 
             @media(max-width: $medium){
-                display: block;
-
-                & .actions-label-wrapper{
-
-                    
-                    & .actions-label{
-
-                        width: 100%;
-                        position: relative;
-                        margin-bottom: -20px;
-                        margin-top: 0;
-                        min-height: unset;
-                        height: 60px;
-
-
-                        & span{
-                            transform: translate(-50%, -50%);
-                        }
-                    };
-                }
+                margin-top: 0;
+                padding: 0;
             }
             
-            #actions-slider{
-        
-                padding: 0;
-                display: flex;
-                padding-top: 20px;
-                padding-bottom: 80px;
-        
-                & .action-slide{
-        
-                    display: flex;
-                    align-items: center;
-                    background: #fff;
-                    width: calc(100% - 140px);
-                    min-height: 180px;
+            & .row{
+                
+                align-items: center;
+                
+                & .text-content{
 
-                    @media(max-width: $medium){
-                        flex-direction: column;
-                    }
-        
-                    & .action-image{
-        
-                        width: 280px;
-                        max-width: 100%;
-                        height: 160px;
-                        background-size: contain;
-        
-                        & .lazy{
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                            width: 100%;
-                            height: 200px;
-                            margin-top: -30px;
-                        }
-                    }
-        
-                    & .action-data{
-                        box-sizing: border-box;
-                        padding: 20px;
-                        width: calc(100% - 20px);
-                        
-                        & .name{
-                            font-size: 32px;
-                            color: #1338BD;
-                            font-weight: bold;
-                            margin-bottom: 10px;
+                    & h1{
+                    
+                        & span{
 
+                            display: inline-block;
+                            
                             @media(max-width: $medium){
-                                font-size: 24px;
+                                font-size: 32px;
+                                line-height: 46px;
+                            }
+    
+                            &.big{
+                                color: #1338BD;
                             }
                         }
                     }
-                }
+                    
+                    & .hero-descriptor{
+                        
+                        margin-top: 0;
+                        margin-bottom: 40px;
+                        font-size: 21px;
+                        font-weight: bold;
+                        color: #1338BD;
 
-                & .swiper-pagination{
-
-                    top: 255px;
-
-                    @media(max-width: $medium){
-                        top: 380px;
+                        @media(max-width: $medium){
+                            font-size: 16px;
+                        }
                     }
-                       
-                    & .swiper-pagination-bullet{
-                        
-                        margin: 0 10px;
-                        width: 11px;
-                        height: 11px;
-                        
-                        &.swiper-pagination-bullet-active{
-                            
-                            background: $call-to-action;
+                }
+                
+                & .image-data{
+                    
+                    flex-grow: 1;
+                    @media(max-width: $large){
+                        order: -1;
+                    }
+                    
+                    & .lazy{
+                        padding-bottom: 100%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        max-width: 80%;
+                        margin: auto;
+
+                        @media(max-width: $medium){
+                            max-width: unset;
                         }
                     }
                 }

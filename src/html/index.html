@@ -7,45 +7,16 @@
     @@include('./parts/header.html')
     <main>
         <div class="global-wrapper" id="main">
-            <section id="hero">
+            <section id="hero" class="lazy" data-src="/img/hero-actions-bgr.jpg">
                 <div class="container">
                     <div class="row flex">
-                        <div class="col l6 m12">
-                            <h1>
-                                <strong>Доставка воды</strong>
-                                <span>в Новороссийске</span>
-                            </h1>
-                            <p>
-                                Заказать доставку воды – просто. Работаем круглосуточно, каждый день без перерывов и выходных.
-                                Большой ассортимент питьевой воды. Заказать воду можно по телефону, либо на сайте.
-                            </p>
-                            <p class="actions-wrapper">
-                                <a href="/catalog.html" class="btn">Перейти в каталог</a>
-                            </p>
+                        <div class="col l5 offset-xl1 text-content align-center-l-down">
+                            <h1><span class="big">Акции</span> <span class="name">лёгкий старт</span></h1>
+                            <p class="hero-descriptor">Выгодные предложения для первого заказа</p>
+                            <a href="/actions.html" class="btn">Больше акций</a>
                         </div>
-                        <div class="col l6 m12">
-                            <div class="lazy monument" data-src="/img/monument.png"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="actions-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col l6 m8 offset-l3 offset-m2">
-                            <div class="actions-slider-wrapper">
-                                <div class="actions-label-wrapper">
-                                    <div class="actions-label">
-                                        <span>Акция</span>
-                                    </div>
-                                </div>
-                                <div class="swiper-container" id="actions-slider">
-                                    <div class="swiper-wrapper">
-                                        @@loop('./parts/action-slide.html', './data/actions-banner.json')
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
+                        <div class="col l5 m6 s12 image-data">
+                            <div class="lazy" data-src="/img/action1.png"></div>
                         </div>
                     </div>
                 </div>
