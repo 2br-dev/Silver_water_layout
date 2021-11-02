@@ -1,0 +1,124 @@
+#news, #news-page{
+
+    & .main-image{
+        padding-bottom: 70%;
+        background-size: cover;
+    }
+
+    & .news-block{
+        margin-bottom: 4vw;
+    }
+
+    & .news-content{
+        display: flex;
+        flex-direction: column;
+
+        & .news-title{
+            font-weight: 500;
+            font-size: 32px;
+            margin: 40px 0;
+        }
+
+        & .separator, & .news-body{
+            flex-grow: 1;
+        }
+    }
+
+    & .date{
+        text-align: right;
+    }
+
+    & .news{
+
+        &.now{
+
+            & .news-image{
+
+                position: relative;
+                padding-bottom: calc(70% + 6px);
+                margin-bottom: 20px;
+
+                & .news-title{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 12px;
+                    background: rgba(black, .7);
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 21px;
+                    margin: 0;
+                }
+            }
+        }
+
+        &.latest{
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            & .news-title{
+                font-weight: 500;
+                font-size: 21px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &.recent{
+
+            margin-bottom: 60px;
+
+            & .news-title{
+                font-weight: 500;
+                font-size: 21px;
+            }
+        }
+
+        &:hover{
+
+            & .news-image{
+                box-shadow: 0 8px 12px rgba(black, .4);
+                background-size: auto 120%;
+            }
+
+            & .news-title{
+                color: $primary;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 4px;
+            }
+        }
+
+        & .news-title{
+            margin: 20px 0;
+            display: inline-block;
+            transition: color .2s;
+        }
+
+        & .news-image{
+    
+            display: block;
+            position: relative;
+            padding-bottom: 70%;
+            background-position: center;
+            transition: box-shadow .2s;
+            background-size: auto 100%;
+            transition: background-size .2s;
+    
+            & .news-date{
+                position: absolute;
+                display: block;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                line-height: 40px;
+                padding: 0 10px;
+                font-size: 12px;
+                color: #fff;
+                background: linear-gradient(11deg, transparent 40%, rgba(black, .7));
+            }
+        }
+    }
+}
