@@ -29,6 +29,29 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col m6 s12">
+                            <div class="row">
+                                <div class="col s12">
+                                    <h2>Галерея</h2>
+                                </div>
+                                <div class="col l6 m12 s6 xs12">
+                                    <div class="gallery-image lazy materialboxed" data-src="/img/news-image.jpg"></div>
+                                </div>
+                                <div class="col l6 m12 s6 xs12">
+                                    <div class="gallery-image lazy materialboxed" data-src="/img/news-image.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m6 s12">
+                            <div class="row">
+                                <div class="s12">
+                                    <h2>Прикреплённые товары</h2>
+                                </div>
+                                @@loop('./parts/card-news.html', './data/pomps.json')
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col s12">
                             <h2>Другие новости</h2>
                         </div>

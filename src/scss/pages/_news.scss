@@ -121,4 +121,15 @@
             }
         }
     }
+
+    & .gallery-image{
+        padding-bottom: 70%;
+        background-size: cover;
+        margin-bottom: 1.5rem;
+    }
+    
+    & .product-card{
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
 }

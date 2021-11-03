@@ -1,4 +1,5 @@
 var sidenav, popularWaterSlider, popularCoolerSlider, actionsSlider, tabs, modal, datepicker;
+var storedImage;
 
 $(() => {
     $(window).on('scroll', updateNavbar);
@@ -12,12 +13,29 @@ $(() => {
     init();
 });
 
+//= Сохранение URL картинки перед ее открытием в полный экран =============
+function storeDataImage(){
+    storedImage = $(this.el).css('background-image');
+}
+
+//= Восстановление URL карнтинки после ее закрытия из полноэкранного режима
+function restoreDataImage(){
+    $(this.el).css({
+        backgroundImage: storedImage
+    })
+}
+
 function init(){
 
     tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
     sidenav = M.Sidenav.init(document.querySelector('.sidenav'));
     modal = M.Modal.init(document.querySelectorAll('.modal'));
     initImageToolTips();
+
+    $('.materialboxed').materialbox({
+        onOpenStart: storeDataImage,
+        onCloseEnd: restoreDataImage
+    });
     
     if($('#popular-water-slider').length){
         let waterOptions = swiperOptions('#water-slider-extras');

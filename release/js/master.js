@@ -10626,6 +10626,7 @@
 
 $.fn.hyphenate=function(){var e="[абвгдеёжзийклмнопрстуфхцчшщъыьэюя]";var t="[аеёиоуыэюя]";var n="[бвгджзклмнпрстфхцчшщ]";var r="[йъь]";var i="­";var s=new RegExp("("+r+")("+e+e+")","ig");var o=new RegExp("("+t+")("+t+e+")","ig");var u=new RegExp("("+t+n+")("+n+t+")","ig");var a=new RegExp("("+n+t+")("+n+t+")","ig");var f=new RegExp("("+t+n+")("+n+n+t+")","ig");var l=new RegExp("("+t+n+n+")("+n+n+t+")","ig");this.each(function(){var e=$(this).html();e=e.replace(s,"$1"+i+"$2");e=e.replace(o,"$1"+i+"$2");e=e.replace(u,"$1"+i+"$2");e=e.replace(a,"$1"+i+"$2");e=e.replace(f,"$1"+i+"$2");e=e.replace(l,"$1"+i+"$2");$(this).html(e)})}
 var sidenav, popularWaterSlider, popularCoolerSlider, actionsSlider, tabs, modal, datepicker;
+var storedImage;
 
 $(() => {
     $(window).on('scroll', updateNavbar);
@@ -10639,12 +10640,29 @@ $(() => {
     init();
 });
 
+//= Сохранение URL картинки перед ее открытием в полный экран =============
+function storeDataImage(){
+    storedImage = $(this.el).css('background-image');
+}
+
+//= Восстановление URL карнтинки после ее закрытия из полноэкранного режима
+function restoreDataImage(){
+    $(this.el).css({
+        backgroundImage: storedImage
+    })
+}
+
 function init(){
 
     tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
     sidenav = M.Sidenav.init(document.querySelector('.sidenav'));
     modal = M.Modal.init(document.querySelectorAll('.modal'));
     initImageToolTips();
+
+    $('.materialboxed').materialbox({
+        onOpenStart: storeDataImage,
+        onCloseEnd: restoreDataImage
+    });
     
     if($('#popular-water-slider').length){
         let waterOptions = swiperOptions('#water-slider-extras');

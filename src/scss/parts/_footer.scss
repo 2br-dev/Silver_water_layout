@@ -78,6 +78,17 @@ footer{
         line-height: 40px;
         padding: 0 20px;
 
+        @media(max-width: $medium){
+            height: fit-content;
+        }
+
+        & > *{
+            @media(max-width: $medium){
+                float: none !important;
+                width: 100%;
+            }
+        }
+
         & a{
             color: $text;
         }

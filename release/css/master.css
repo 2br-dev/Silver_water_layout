@@ -3001,6 +3001,41 @@ body.keyboard-focused .dropdown-content li:focus {
   border-radius: 0;
   will-change: bottom, opacity; }
 
+.materialboxed {
+  display: block;
+  cursor: zoom-in;
+  position: relative;
+  transition: opacity .4s;
+  -webkit-backface-visibility: hidden; }
+  .materialboxed:hover:not(.active) {
+    opacity: .8; }
+  .materialboxed.active {
+    cursor: zoom-out; }
+
+#materialbox-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #292929;
+  z-index: 1000;
+  will-change: opacity; }
+
+.materialbox-caption {
+  position: fixed;
+  display: none;
+  color: #fff;
+  line-height: 50px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0% 15%;
+  height: 50px;
+  z-index: 1000;
+  -webkit-font-smoothing: antialiased; }
+
 .sidenav {
   position: fixed;
   width: 300px;
@@ -23447,7 +23482,9 @@ header {
             z-index: 3;
             box-shadow: 0 0 0 1px white inset; }
             header nav .price-block .price-wrapper .count {
-              padding: 0; }
+              padding: 0;
+              margin: 0;
+              width: 100%; }
             header nav .price-block .price-wrapper .separator, header nav .price-block .price-wrapper .price {
               display: none; } }
     header nav .compare-block {
@@ -24081,6 +24118,13 @@ footer .footer-copyright {
   height: 40px;
   line-height: 40px;
   padding: 0 20px; }
+  @media (max-width: 800px) {
+    footer .footer-copyright {
+      height: fit-content; } }
+  @media (max-width: 800px) {
+    footer .footer-copyright > * {
+      float: none !important;
+      width: 100%; } }
   footer .footer-copyright a {
     color: #333; }
 
@@ -24898,3 +24942,12 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
     font-size: 12px;
     color: #fff;
     background: linear-gradient(11deg, transparent 40%, rgba(0, 0, 0, 0.7)); }
+
+#news .gallery-image, #news-page .gallery-image {
+  padding-bottom: 70%;
+  background-size: cover;
+  margin-bottom: 1.5rem; }
+
+#news .product-card, #news-page .product-card {
+  padding: 0;
+  margin-bottom: 1.5rem; }
