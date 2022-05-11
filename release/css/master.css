@@ -23377,6 +23377,34 @@ header {
       font-size: 12px;
       text-transform: uppercase;
       font-weight: 500; }
+      header .top .accent .affilial-selector {
+        width: fit-content;
+        position: relative;
+        z-index: 99; }
+        header .top .accent .affilial-selector ul {
+          position: absolute;
+          z-index: 90;
+          display: block;
+          background: #fff;
+          padding: 0;
+          top: 100%;
+          left: 50%;
+          transition: transform .2s, opacity .2s;
+          transform: translate(-50%, -20px);
+          opacity: 0;
+          pointer-events: none; }
+          header .top .accent .affilial-selector ul li a {
+            display: flex;
+            border-radius: 0;
+            padding: 0 20px;
+            line-height: 2.6rem;
+            color: #333; }
+            header .top .accent .affilial-selector ul li a:hover {
+              background-color: #efefef; }
+        header .top .accent .affilial-selector:hover ul {
+          transform: translate(-50%, 0);
+          opacity: 1;
+          pointer-events: all; }
       @media (max-width: 1470px) {
         header .top .accent + ul {
           display: none; } }
