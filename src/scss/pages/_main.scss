@@ -16,7 +16,7 @@
             margin-top: -96px;
             display: flex;
             align-items: center;
-            padding: 10vw;
+            // padding: 10vw;
 
             @media(max-width: $medium){
                 margin-top: 0;
@@ -80,6 +80,20 @@
                         }
                     }
                 }
+            }
+        }
+
+        &#info{
+
+            @media(min-width: $medium){
+                padding-top: 0;
+            }
+
+            & img{
+                border-radius: 7px;
+                width: 100%;
+                display: block;
+                box-shadow: 1px 3px 6px rgba(black, .4);
             }
         }
 

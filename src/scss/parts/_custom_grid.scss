@@ -157,9 +157,9 @@
 
 
 @mixin hide($class, $min, $max){
-	.hide-#{$class}-down{@media(max-width: $min){display: none;}}
-	.hide-#{$class}-up{@media(min-width: $min){display: none;}}
-	.hide-#{$class}-only{@media(min-width: $min) and (max-width: $max){display: none;}}
+	.hide-#{$class}-down{@media(max-width: $min){display: none !important;}}
+	.hide-#{$class}-up{@media(min-width: $min){display: none !important;}}
+	.hide-#{$class}-only{@media(min-width: $min) and (max-width: $max){display: none !important;}}
 }
 
 @mixin left($class, $min, $max){
