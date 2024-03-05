@@ -1,0 +1,134 @@
+@import '../parts/vars';
+
+.global-wrapper#delivery{
+
+    & section{
+
+        &#hero{
+            background: url(../img/city_panorama.png) center center no-repeat;
+            background-size: cover;
+            height: 752px;
+            margin-bottom: 60px;
+    
+            & .container{
+    
+                height: 100%;
+    
+                & .row{
+    
+                    height: 100%;
+                    align-items: center;
+                    display: flex;
+                    height: 100%;
+    
+                    & .col{
+    
+                        & h1{
+    
+                            & strong, & span{
+    
+                                display: block;
+    
+                                @media(max-width: $small){
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            @media(max-width: $tablet-edge){
+    
+                height: 50vw;
+                min-height: 350px;
+    
+            }
+        }
+
+		&#payment{
+
+			& .payment-card{
+				border: 1px solid #ccc;
+				height: 100%;
+				padding: clamp(5px, 2vw, 36px);
+				padding-left: clamp(20px, 2vw, 36px);
+				box-sizing: border-box;
+				border-radius: clamp(4px, 2vw, 6px);
+				background-color: #fff;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+
+				& .card-content{
+					flex-grow: 1;
+				}
+
+
+				& h3{
+					margin-top: 0px;
+					position: relative;
+					
+					@media(max-width: 800px){
+						margin-top: 20px;
+					}
+
+					&:before{
+						content: '';
+						display: block;
+						width: 12px;
+						height: 50px;
+						position: absolute;
+						top: 50%;
+						left: calc(clamp(22px, 2vw, 37px) * -1);
+						transform: translateY(-50%);
+						background-color: $primary;
+					}
+				}
+
+				& .card-footer{
+					border-top: 1px solid black;
+					padding-top: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					& img{
+						width: 20%;
+						max-height: 46px;
+					}
+				}
+			}
+
+			& .container{
+
+				& > .row:first-of-type{
+					margin-bottom: 4vmax;
+				}
+
+				& .row .row{
+					margin-bottom: 0;
+				}
+			}
+
+			& .warning{
+				box-shadow: 0 0 0 1px red inset;
+				padding: clamp(6px, 2vw, 20px);
+				border-radius: clamp(4px, 2vw, 6px);
+				background-color: rgba(red, .05);
+
+				& strong{
+					font-weight: 700;
+				}
+			}
+		}
+
+		&#info{
+			background-color: $primary;
+			color: #fff;
+			font-size: clamp(16px, 3vw, 21px);
+			line-height: 1.4em;
+		}
+    }
+
+}

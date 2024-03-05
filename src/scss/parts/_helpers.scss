@@ -420,4 +420,13 @@ body{
             line-height: 46px;
         }
     }
+
+    & .margin-bottom{
+        margin-bottom: $gutter-width;
+    }
+
+    & .pin{
+        position: sticky;
+        top: 80px;
+    }
 }

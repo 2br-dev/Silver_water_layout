@@ -31519,6 +31519,13 @@ body .price-wrapper .new-price {
   font-weight: bold;
   line-height: 46px;
 }
+body .margin-bottom {
+  margin-bottom: 20px;
+}
+body .pin {
+  position: sticky;
+  top: 80px;
+}
 
 body {
   font-size: 16px;
@@ -32808,4 +32815,138 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
 #news .product-card, #news-page .product-card {
   padding: 0;
   margin-bottom: 1.5rem;
+}
+
+/* Validation Sass Placeholders */
+.select-wrapper.valid > input.select-dropdown {
+  border-bottom: 1px solid #4CAF50;
+  box-shadow: 0 1px 0 0 #4CAF50;
+}
+
+.select-wrapper.invalid > input.select-dropdown, .select-wrapper.invalid > input.select-dropdown:focus {
+  border-bottom: 1px solid #F44336;
+  box-shadow: 0 1px 0 0 #F44336;
+}
+
+.select-wrapper.valid .helper-text[data-success], .select-wrapper.invalid ~ .helper-text[data-error] {
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+}
+
+.select-wrapper.valid ~ .helper-text:after {
+  content: attr(data-success);
+  color: #4CAF50;
+}
+
+.select-wrapper.invalid ~ .helper-text:after {
+  content: attr(data-error);
+  color: #F44336;
+}
+
+.select-wrapper + label:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.2s opacity ease-out, 0.2s color ease-out;
+}
+
+.global-wrapper#delivery section#hero {
+  background: url(../img/city_panorama.png) center center no-repeat;
+  background-size: cover;
+  height: 752px;
+  margin-bottom: 60px;
+}
+.global-wrapper#delivery section#hero .container {
+  height: 100%;
+}
+.global-wrapper#delivery section#hero .container .row {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+.global-wrapper#delivery section#hero .container .row .col h1 strong, .global-wrapper#delivery section#hero .container .row .col h1 span {
+  display: block;
+}
+@media (max-width: 600px) {
+  .global-wrapper#delivery section#hero .container .row .col h1 strong, .global-wrapper#delivery section#hero .container .row .col h1 span {
+    text-align: center;
+  }
+}
+@media (max-width: 1470px) {
+  .global-wrapper#delivery section#hero {
+    height: 50vw;
+    min-height: 350px;
+  }
+}
+.global-wrapper#delivery section#payment .payment-card {
+  border: 1px solid #ccc;
+  height: 100%;
+  padding: clamp(5px, 2vw, 36px);
+  padding-left: clamp(20px, 2vw, 36px);
+  box-sizing: border-box;
+  border-radius: clamp(4px, 2vw, 6px);
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.global-wrapper#delivery section#payment .payment-card .card-content {
+  flex-grow: 1;
+}
+.global-wrapper#delivery section#payment .payment-card h3 {
+  margin-top: 0px;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .global-wrapper#delivery section#payment .payment-card h3 {
+    margin-top: 20px;
+  }
+}
+.global-wrapper#delivery section#payment .payment-card h3:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: calc(clamp(22px, 2vw, 37px) * -1);
+  transform: translateY(-50%);
+  background-color: #1338BD;
+}
+.global-wrapper#delivery section#payment .payment-card .card-footer {
+  border-top: 1px solid black;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.global-wrapper#delivery section#payment .payment-card .card-footer img {
+  width: 20%;
+  max-height: 46px;
+}
+.global-wrapper#delivery section#payment .container > .row:first-of-type {
+  margin-bottom: 4vmax;
+}
+.global-wrapper#delivery section#payment .container .row .row {
+  margin-bottom: 0;
+}
+.global-wrapper#delivery section#payment .warning {
+  box-shadow: 0 0 0 1px red inset;
+  padding: clamp(6px, 2vw, 20px);
+  border-radius: clamp(4px, 2vw, 6px);
+  background-color: rgba(255, 0, 0, 0.05);
+}
+.global-wrapper#delivery section#payment .warning strong {
+  font-weight: 700;
+}
+.global-wrapper#delivery section#info {
+  background-color: #1338BD;
+  color: #fff;
+  font-size: clamp(16px, 3vw, 21px);
+  line-height: 1.4em;
 }
