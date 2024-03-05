@@ -92,10 +92,21 @@
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					flex-wrap: wrap;
 
 					& img{
 						width: 20%;
 						max-height: 46px;
+
+						@media(max-width: $extra-small){
+							
+							width: calc(30% - 20px);
+							margin: 10px;
+
+							&:first-of-type{
+								width: 100%;
+							}
+						}
 					}
 				}
 			}

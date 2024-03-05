@@ -32924,10 +32924,20 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .global-wrapper#delivery section#payment .payment-card .card-footer img {
   width: 20%;
   max-height: 46px;
+}
+@media (max-width: 400px) {
+  .global-wrapper#delivery section#payment .payment-card .card-footer img {
+    width: calc(30% - 20px);
+    margin: 10px;
+  }
+  .global-wrapper#delivery section#payment .payment-card .card-footer img:first-of-type {
+    width: 100%;
+  }
 }
 .global-wrapper#delivery section#payment .container > .row:first-of-type {
   margin-bottom: 4vmax;
