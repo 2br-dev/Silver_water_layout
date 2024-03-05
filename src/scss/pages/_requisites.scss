@@ -1,0 +1,120 @@
+.global-wrapper#requisites{
+	
+	& section{
+
+		&#hero{
+            background: url(../img/city_panorama.png) center center no-repeat;
+            background-size: cover;
+            height: 752px;
+            margin-bottom: 60px;
+    
+            & .container{
+    
+                height: 100%;
+    
+                & .row{
+    
+                    height: 100%;
+                    align-items: center;
+                    display: flex;
+                    height: 100%;
+    
+                    & .col{
+    
+                        & h1{
+    
+                            & strong, & span{
+    
+                                display: block;
+    
+                                @media(max-width: $small){
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            @media(max-width: $tablet-edge){
+    
+                height: 50vw;
+                min-height: 350px;
+    
+            }
+        }
+
+		&#requisites{
+
+			text-align: center;
+
+			& .kv-pair{
+
+				display: flex;
+				padding: clamp(5px, 2vw, 15px);
+				text-align: left;
+
+				& .key{
+					width: 40%;
+					flex-shrink: 0;
+				}
+
+				&:nth-child(even){
+					background-color: rgba(black, .05);
+				}
+
+				@media(max-width: $small){
+
+					flex-direction: column;
+
+					&:nth-child(even){
+						background-color: transparent;
+					}
+
+					& .key{
+						width: 100%;
+						border-bottom: 1px solid #ccc;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media print{
+
+	header, footer, .fab{
+		display: none;
+	}
+
+	.global-wrapper#requisites{
+
+		& img, & .btn, & section#hero{
+			display: none !important;
+		}
+
+		& section{
+
+			&#requisites{
+				
+				& .kv-pair{
+
+					flex-direction: row;
+		
+					&:nth-child(even){
+						background-color: rgba(black, .05);
+					}
+		
+					& .key{
+						width: 40%;
+						border-bottom: 0;
+					}
+		
+					& .key, & .value{
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}

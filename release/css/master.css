@@ -32960,3 +32960,82 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
   font-size: clamp(16px, 3vw, 21px);
   line-height: 1.4em;
 }
+
+.global-wrapper#requisites section#hero {
+  background: url(../img/city_panorama.png) center center no-repeat;
+  background-size: cover;
+  height: 752px;
+  margin-bottom: 60px;
+}
+.global-wrapper#requisites section#hero .container {
+  height: 100%;
+}
+.global-wrapper#requisites section#hero .container .row {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+.global-wrapper#requisites section#hero .container .row .col h1 strong, .global-wrapper#requisites section#hero .container .row .col h1 span {
+  display: block;
+}
+@media (max-width: 600px) {
+  .global-wrapper#requisites section#hero .container .row .col h1 strong, .global-wrapper#requisites section#hero .container .row .col h1 span {
+    text-align: center;
+  }
+}
+@media (max-width: 1470px) {
+  .global-wrapper#requisites section#hero {
+    height: 50vw;
+    min-height: 350px;
+  }
+}
+.global-wrapper#requisites section#requisites {
+  text-align: center;
+}
+.global-wrapper#requisites section#requisites .kv-pair {
+  display: flex;
+  padding: clamp(5px, 2vw, 15px);
+  text-align: left;
+}
+.global-wrapper#requisites section#requisites .kv-pair .key {
+  width: 40%;
+  flex-shrink: 0;
+}
+.global-wrapper#requisites section#requisites .kv-pair:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 600px) {
+  .global-wrapper#requisites section#requisites .kv-pair {
+    flex-direction: column;
+  }
+  .global-wrapper#requisites section#requisites .kv-pair:nth-child(even) {
+    background-color: transparent;
+  }
+  .global-wrapper#requisites section#requisites .kv-pair .key {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media print {
+  header, footer, .fab {
+    display: none;
+  }
+  .global-wrapper#requisites img, .global-wrapper#requisites .btn, .global-wrapper#requisites a.btn-flat, .global-wrapper#requisites button.btn-flat, .global-wrapper#requisites section#hero {
+    display: none !important;
+  }
+  .global-wrapper#requisites section#requisites .kv-pair {
+    flex-direction: row;
+  }
+  .global-wrapper#requisites section#requisites .kv-pair:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .global-wrapper#requisites section#requisites .kv-pair .key {
+    width: 40%;
+    border-bottom: 0;
+  }
+  .global-wrapper#requisites section#requisites .kv-pair .key, .global-wrapper#requisites section#requisites .kv-pair .value {
+    font-size: 16px;
+  }
+}
